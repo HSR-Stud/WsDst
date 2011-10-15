@@ -1,0 +1,13 @@
+#TeXlipse project settings
+#Tue Jan 15 13:13:14 GMT 2008
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=WS_DST.tex
+outputFile=WS_DST.pdf
+langSpell=de_CH
+markDer=true
+srcDir=
