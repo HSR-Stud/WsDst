@@ -41,11 +41,16 @@
 					wobei $\frac{2\pi}{\sqrt{2}} = 4.44$ und $\hat{B} \cdot A = \hat{\Phi}$ 
 			\end{tabular}
 	\subsection{Der reale (einphasige) Transformator}
+	Für Dreiphasige Transfromatoren bei die Spannung mit dem Faktor $\sqrt(3)$
+	teilen, bei Leistungen  Strom und Spannung mit dem Faktor $3$
+	Multiplizieren um alle drei Phasen abzudecken.\\
 		\subsubsection{Ersetzen der magnetischen Kopplung}
 			\begin{tabular}{p{5.8cm}p{8cm}p{4.5cm}}
             	Spannung, Strom &
             		$U_2' = U_2 \cdot \frac{N_1}{N_2}$ \quad 
             		$I_2' = I_2 \cdot \frac{N_2}{N_1}$ \\
+            	Nennstrom & 
+            		$I_N = S_N / U_N$
             	Widerstand, Streufluss &
             		$R_2' = R_2 \cdot (\frac{N_1}{N_2})^2$ \quad 
             		$X_{\sigma 2}' = X_{\sigma 2} \cdot (\frac{N_1}{N_2})^2$ \\
@@ -132,11 +137,12 @@
 	            	%\end{minipage}} \\
 	            \\
 				Kurzschlussimpedanz&
-					$\underline{Z}_k = R_k + jX_k$ $Z_k = \frac{U_k}{I_k}$ \\
+					$\underline{Z}_k = R_k + jX_k$ \\
+					& $Z_k = \frac{U_k}{I_k}$ \\
 					& $R_k = R_1 + R_2' = \cos{\varphi_k} \cdot Z_k  = \frac{P_k}{I_k^2}$  \\
 					& $X_k = X_{\sigma1} + X_{\sigma2}' = \sin{\varphi_k} \cdot Z_k = \frac{Q_k}{I_k^2}$ \\
 				Leistungsfaktor im Kurzschluss&
-					$\cos(\varphi_k) = \frac{P_k}{U_1 \cdot I_k} = \frac{P_k}{S_k}$ \\
+					$\cos(\varphi_k) = \frac{P_k}{U_k \cdot I_k} = \frac{P_k}{S_k}$ \\
              \end{tabular}
 
 		\subsubsection{Spannungs\"anderung bei Belastung}
