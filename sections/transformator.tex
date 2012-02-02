@@ -1,0 +1,245 @@
+\section{Transformator}
+		
+	\subsection{Trafomodelle}
+%		\subsubsection{Grundstrucktur des Trafo}
+%			\begin{tabular}{p{7cm}p{4.5cm}p{5cm}}
+%	        	\textbf{} &
+%	        		\begin{minipage}{4.5cm}
+%		            	\includegraphics[width=3.5cm]{bilder/GrundstruckturTrafo.png}
+%		            \end{minipage} \\
+%	        \end{tabular}
+		\subsubsection{Der ideale Trafo}
+			\begin{tabular}{p{7cm}p{4.5cm}p{5cm}}
+				Übersetzungsverhältnis &
+					$\text{ü} = \frac{|\underline{U}_1|}{|\underline{U}_2|} =
+					\frac{|\underline{I}_2|}{|\underline{I}_1|} = \frac{N_1}{N_2}$ &
+					\begin{minipage}{4.5cm}
+						\includegraphics[width=3.5cm]{bilder/GrundstruckturTrafo.png}
+					\end{minipage} \\
+				Leistungsbilanz &
+					$\underline{S}_1 = \underline{S}_2$ &
+					oder $\underline{U}_2 \cdot \underline{I}_2^* = \underline{U}_1 \cdot \underline{I}_1^*$ \\
+				Scheinwiderstandsübersetztung &
+					$\underline{Z}_{aU} = \frac{|\underline{U}_1|^2}{|\underline{U}_2|^2} \cdot \underline{Z}_a = \text{ü}^2 \cdot \underline{Z}_a$ &
+					\begin{minipage}{4.5cm}
+	            		\includegraphics[width=3.5cm]{bilder/IdealerTravoImpedanzwandler.png}
+	            	\end{minipage}
+			\end{tabular}
+		\subsubsection{Verlustloser und Streuungsfreier Trafo}
+			% trafo aus ET3 projekt
+			\input{sections/snipptes/trafo} 	
+		\subsubsection{Transformatoren-Hauptgleichung (gilt bei Leerlauf)}
+			\begin{tabular}{p{7cm}p{4.5cm}p{5cm}}
+      			\fbox{$| \hat{u}_{10} | = \hat{i}_0 \cdot X_{L1}$}
+      			& 	\fbox{$\hat{u}_{10} = \hat{i}_0 \cdot \omega \cdot L_1$} \\
+      		
+				\fbox{$U_{20} = \frac{2\pi}{\sqrt{2}}N_2 f \hat{B}_1 A$}
+				&
+            	\fbox{$U_{10} = \frac{2\pi}{\sqrt{2}}N_1 f \hat{B}_1 A$} &
+					wobei $\frac{2\pi}{\sqrt{2}} = 4.44$ und $\hat{B} \cdot A = \hat{\Phi}$ 
+			\end{tabular}
+	\subsection{Der reale (einphasige) Transformator}
+		\subsubsection{Ersetzen der magnetischen Kopplung}
+			\begin{tabular}{p{5.8cm}p{8cm}p{4.5cm}}
+            	Spannung, Strom &
+            		$U_2' = U_2 \cdot \frac{N_1}{N_2}$ \quad 
+            		$I_2' = I_2 \cdot \frac{N_2}{N_1}$ \\
+            	Widerstand, Streufluss &
+            		$R_2' = R_2 \cdot (\frac{N_1}{N_2})^2$ \quad 
+            		$X_{\sigma 2}' = X_{\sigma 2} \cdot (\frac{N_1}{N_2})^2$ \\
+            	Vollständiges Ersatzschaltbild &
+            		\begin{minipage}{8cm}
+	            	
+	            		\includegraphics[width=6cm]{bilder/VollstaendigesErsatzschaltbild.png} \end{minipage} &
+					\begin{minipage}{4.5cm}
+                    	\tiny
+                    		$R_1, R_2'$: Widerstand Spule\\ \\
+                    		$jX_{\sigma 1}, jX_{\sigma 2}'$: Streufluss Spule\\ \\
+                    		$R_{Fe}$: Eisenverlust\\ \\
+                    		$jX_h$: Hauptfluss Spule\\
+                    \end{minipage} \\ \\
+				Systemgleichung des realen Trafo &
+					$\underline{U}_1 = R_1\cdot\underline{I}_1 + jX_{\sigma 1}\cdot\underline{I}_1 + jX_h\cdot(\underline{I}_1+\underline{I}_2')$ \\
+					& $\underline{U}_2' = R_2'\cdot\underline{I}_2' + jX_{\sigma 2}'\cdot\underline{I}_2' + jX_h\cdot(\underline{I}_1+\underline{I}_2')$
+
+            \end{tabular}
+            	Für mittlere Transformatorenleistungen erbgeben sich etwa folgende Relationen zwischen
+            	den einzelnen $R$s und $X$s:
+            	$$ R_1 : R_2' : X_{\sigma 1} : X_{\sigma 2}' : X_h : R_{Fe} \approx 1:1:2:2:1000:10000	$$
+            	
+		\subsubsection{Leerlauf und Magnetisierung}
+			\begin{tabular}{p{5cm}p{6cm}p{7cm}}
+            	Rechnen &
+            		\begin{minipage}{13cm}
+                    	Mit Leerlaufdaten $R_{Fe}$ und $X_h$ ausrechnen. $R_1$ und $X_{\sigma1}$ vernachlässigen.
+                    \end{minipage} \\ \\
+            	Induktiver Leerlaufstrom &
+            		\fbox{$\underline{I}_{10} = \underline{I}_{1Fe} + \underline{I}_{1\mu}$} $(\underline{I}_{1\mu} \gg \underline{I}_{1Fe})$ &
+            		\begin{minipage}{8cm}
+	            		\includegraphics[width=5cm]{bilder/ErsatzschaltbildTrafoLeerlauf.png}
+	            	\end{minipage} \\ \\
+				Magnetisierungsstrom &
+					\fbox{$i_\mu = \sqrt{2}I_{\mu1}\cdot \sin(\omega t) + \sqrt{2}I_{\mu3}\cdot \sin(3\omega t) + \sqrt{2}I_{\mu m}\cdot \sin(m\omega t)$} &
+					\hspace{3.3cm}$(m=2n+1 \hspace{0.3cm} n\epsilon \mathbb{N}_0)$ \\
+					&
+					Für den Effektivwert des Stromes: &
+					\fbox{$I_{\mu RMS} = \sqrt{I_{\mu1}^2 + I_{\mu3}^2 +\ldots+ I_{\mu m}} $}\\ \\
+				Leerlaufverluste &
+					\fbox{$P_0 = P_{0Cu} + P_{0Hy} + P_{0Wi}$} \\
+				Hystreseverluste &
+					\fbox{$P_{Hy} \sim f \cdot B^2$} \\
+				Wirbelstromverluste &
+					\fbox{$v_W = c_W \cdot f^2 \cdot B^2$} &
+					$c_W$ ist materialabhängige Konstante \\
+				Relativer Leerlaufstrom &
+					\fbox{$i_{0N} = \frac{I_{0N}}{I_{1N}}$} &
+					$I_{1N}$ ist eingangsseitiger Nennstrom \\
+				Eisenverluststrom &
+					\fbox{$I_{Fe} = \frac{P_{0N}}{U_{1N}} = I_0 \cdot \cos(\varphi_0)$} \\
+				Eisenverlustwiderstand &
+					\fbox{$R_{Fe} = \frac{U_{1N}^2}{P_{0N}} = \frac{P_{0N}}{I_{Fe}^2}$} \\
+				Hauptreaktanz &
+					\fbox{$X_h = L_h \omega = \frac{U_{1N}}{I_{\mu}} = \frac{U_{1N}^2}{Q_{0N}}
+					=
+					\frac{Q_{0N}}{I_{\mu}^2}$} 
+					& \fbox{$Q_{0N} = \sqrt{S_{0N}^2 - P_{0N}^2}$} \\
+				Magnetisierungsstrom &
+					\fbox{$I_\mu = I_{0N} \cdot \sin(\varphi_0) = \sqrt{I_0^2 - I_{Fe}^2}$} &
+					\begin{minipage}{7cm}
+                    	\begin{tabular}{p{2.5cm}p{3.5cm}}
+	                    	\begin{minipage}{2.5cm}
+	                        	\includegraphics[height=1.5cm]{bilder/ZeigerdiagrammRealerTrafoLeerlauf.png}
+	                        \end{minipage} &
+							\begin{minipage}{3.5cm}
+	                       		oder \fbox{$\hat{I}_{\mu} = \frac{\hat{H}_{Fe} \cdot l_{Fe}}{N_1}$}
+	                        \end{minipage}
+						\end{tabular}
+	            	\end{minipage} \\
+				Leistungsfaktor im Leerlauf &
+					\fbox{$\cos(\varphi_0) = \frac{P_{0N}}{I_{0N} \cdot U_{1N}}$} \\
+            \end{tabular}
+		\subsubsection{Kurzschluss}
+			\begin{tabular}{p{6cm}p{6cm}p{6.5cm}}
+            		\begin{minipage}{12cm}
+                    	Mit Kurzschlussdaten $R_1$ und $X_{\sigma1}$ ausrechnen. $R_{Fe}$ und $X_h$ vernachlässigen.
+                    \end{minipage} 
+					& &	
+					\multirow{3}{6.5cm}{
+					%\begin{minipage}{7cm}
+	            		\includegraphics[height=2.5cm]{bilder/KurzschlussErsatzschaltbild.png} } \\
+	            	%\end{minipage}} \\
+	            \\
+				Kurzschlussimpedanz&
+					\fbox{$\underline{Z}_k = R_k + jX_k$} \fbox{$Z_k = \frac{U_k}{I_k}$} \\
+					& \fbox{$R_k = R_1 + R_2' = \cos{\varphi_k} \cdot Z_k  = \frac{P_k}{I_k^2}$}  \\
+					& \fbox{$X_k = X_{\sigma1} + X_{\sigma2}' = \sin{\varphi_k} \cdot Z_k = \frac{Q_k}{I_k^2}$} \\
+				Leistungsfaktor im Kurzschluss&
+					\fbox{$\cos(\varphi_k) = \frac{P_k}{U_1 \cdot I_k} = \frac{P_k}{S_k}$} \\
+             \end{tabular}
+
+		\subsubsection{Spannungsänderung bei Belastung}
+			\begin{tabular}{p{10cm}p{6cm}}
+            		\begin{minipage}{10cm}
+	            		\fbox{$\underline{U}_1 =
+	            		\underline{U}_R+\underline{U}_X+\underline{U}_2'$} \qquad
+	            		\fbox{$\underline{U}_2'=\underline{U}_2 \cdot "u$}\\ \\
+	            		\fbox{$\underline{U}_R=R_k \cdot \underline{I}_1$} \qquad
+	            		\fbox{$\underline{U}_X=jX_k \cdot \underline{I}_1$}\qquad
+	            		\fbox{$\underline{I}_2' = \underline{I}_1$}\\
+	            		\end{minipage} &
+            		\begin{minipage}{6cm}
+	            		\includegraphics[width=5cm]{bilder/ErsatzschaltbildTrafoLast.png}
+	            	\end{minipage}\\			
+            \end{tabular}\\ \\
+
+			\begin{tabular}{p{8cm}|p{10cm}}
+	 			\textbf{Zeigerdiagramme} & \textbf{Kappsches Dreieck}\\
+				\begin{minipage}{8cm}
+	            	\includegraphics[width=8cm]{../WS_DST/bilder/KappschesDreieck_1.png}
+	            \end{minipage}  & \hspace{0.2cm}
+				\begin{minipage}{10cm} 
+		        	\begin{minipage}{2.5cm}
+						\includegraphics[width=3cm]{../WS_DST/bilder/KappschesDreieck.png}
+		            \end{minipage}
+					\begin{minipage}{7.5cm}
+		      			$$u_{\varphi} = u_{\varphi'} + 1 - \sqrt{1 - u_{\varphi''}^2}$$
+		      			$$ u_\varphi \approx u_{\varphi'}\quad (\text{für }u_k
+		      			=\frac{U_k}{U_{N}} \cdot 100\% < 4 \%)$$
+		      			$$u_{\varphi'} = u_r \cdot \cos \varphi + u_x
+		      			\cdot \sin \varphi$$ $$u_{\varphi''} = u_x \cdot \cos \varphi - u_r \cdot \sin \varphi$$
+		      			$$ u_r = \frac{R_k I}{U_N} \qquad u_x = \frac{X_k I}{U_N} $$
+		      			$$ U_2 = \frac{U_N}{"u} - \Delta U_2 = \frac{U_1}{"u} - \frac{1}{"u}
+		      			U_N u_\varphi $$\\
+		      		\end{minipage}         
+                \end{minipage}\\
+				\begin{minipage}{8cm}
+ 					\begin{tabular}[c]{p{2.66cm}p{2.66cm}p{2.66cm}}
+                     	$\quad \varphi = 0$ & $\quad\varphi > 0$ & $\quad\varphi
+                     	< 0$\\ rein ohmsche & induktive & kapazitive\\
+                     	Last & Last & Last\\
+                     	&&\\
+                     	&&\\
+                     	&&\\
+                     	&&\\
+                     \end{tabular}               
+                \end{minipage}& \hspace{0.2cm}
+				\begin{minipage}{10cm}
+		      		Beim kappschen Dreieck wird mit ``genormten'' Grössen (klein $u$) gerechnet: 
+		      		$u = \frac{U_{Strang}}{U_{N, Strang}} = \frac{U_X}{U_1} \qquad
+		      		\boldsymbol{U_N = U_1} $\\ \\ Das Kappsche Dreieck dreht sich um die
+		      		Spitze der Primärspannung. Bei konstantem Strom und variablem $cos(\varphi)$ beschreibt ${u}_2'$
+		      		einen
+		      		Kreis um die Primärspannung.\\ Bei \textbf{kapazitiver Last steigt}
+		      		die Sekundärspannung über den Leerlaufwert an. \\                  
+                \end{minipage}     
+            \end{tabular}
+
+		
+		\subsubsection{Wirkungsgrad des Trafos}
+			\begin{tabular}{p{5cm}p{7cm}p{7cm}}
+            	Wirkungsgrad &
+            		\fbox{$\eta = 1-\dfrac{P_{V0} + P_{VK} \cdot
+            		(\frac{P_B}{P_N})^2}{P_B} $} &
+            	\begin{minipage}{7cm}
+                	$P_B$ = Betriebsnennleistung\\
+                	$P_{N}$ = Nennleistung\\
+                	$P_{V0}$ = Leerlaufverlustleistung\\
+                	$P_{VK}$ = Kurzschlussverlustleistung                	
+                \end{minipage}\\ \\
+            	 &
+            		\fbox{$\eta = 1 - \dfrac{a + (\frac{P_B}{P_N})^2}{P_B} P_{VK}$} &
+            	\begin{minipage}{7cm}
+ 					$a = \dfrac{P_{V0}}{P_{VK}}$                	
+                \end{minipage}\\ \\            		
+            	 &
+            		\fbox{$\eta = 1 - \frac{P_{V0}+P_{VK}}{P_B} $} 
+            		& (bei Wirkleistungsvollast) \\ \\
+            	Maximaler Wirkungsgrad
+            	& \fbox{$S_{\eta-max} = \sqrt{a} \cdot S_N$} \fbox{$P_{\eta-max} = \sqrt{a} \cdot
+            	P_N$} 
+            	& (Kupferverluste = Eisenverluste)
+            \end{tabular}	
+
+\newpage
+	\subsection{Transformatoren Kühlmittel}
+		\begin{center}
+	    	\includegraphics[width=19cm]{../WS_DST/bilder/Kuehlmittel.png}
+	    \end{center} 
+
+	\subsection{Drehstrom-Leistungstransformatoren} 
+	Angegebene Leistung bezieht sich immer auf alle drei Wicklungen. $\Rightarrow P_{Wicklung} =
+	\frac{P_N}{3}$ \\
+	Angegebene Spannungen und Ströme gelten immer für Aussenleiter. Somit muss immer entweder - je
+ nachdem ob Dreieck- oder Sternschaltung vorliegt -	Strom oder Spannung mit Faktor
+ $\frac{1}{\sqrt{3}}$ multipliziert werden.
+ 	\subsubsection{Bauformen}
+	 $$\text{Kennzeichnung} = [a][b][c][d] = \begin{cases}
+                  [a] = \text{Oberspannungswicklung, Grossbuchstabe (Y,D,III,Z)
+                  }\\
+                  [b] = \text{Unterspannungswicklung, Kleinbuchstabe (y,d,iii,z) } \\
+                  [c] \cdot 30^\circ = \text{Phasenverschiebung zwischen Unter- und Oberspannung }
+                  \\ [d] = 0 \text{, falls Neutralleiter herausgeführt (optional)}
+                  \end{cases}$$
+		\begin{center}
+	    	\includegraphics[height=6cm]{../WS_DST/bilder/Drehstromtrafo.png}
+	    \end{center} 
