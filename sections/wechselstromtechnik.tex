@@ -232,6 +232,23 @@
 				\end{tabular}
 		\subsubsection{Blindleistungskompensation (mit Kondensator)}
 		\input{sections/snipptes/blindleistungskompensation}
+		\begin{multicols}{2}
+			\subsection{RL Serieschaltung}
+				$P\left[W\right]=\frac{U^2_R\left[V\right]}{R_r\left[\Omega\right]}$\\
+				$U_R=U_0\left[V\right]\cdot cos\varphi$\\
+				$R_r\left[\Omega\right]=\frac{U^2_R\left[V\right]}{P\left[VA\right]}$\\
+				$tan\varphi =\frac{\omega L_r}{R_r}$\\
+				$L_r\left[H\right]=\frac{R_r \cdot tan \varphi}{\omega}$
+				\columnbreak
+				
+			\subsection{RL Parallelschaltung}
+				$P\left[W\right]=\frac{U^2_R\left[V\right]}{R_p\left[\Omega\right]}$\\
+				$R_p=\frac{U^2\left[V\right]}{P\left[VA\right]}$\\
+				$tan\varphi = \frac{\frac{1}{\omega L_p}}{\frac{1}{R_p}}=\frac{R_p}{\omega
+				L_p}$\\
+				$L_p= \frac{R_p}{\omega \cdot tan\varphi}$
+				
+		\end{multicols}
 		
 		\subsubsection{Leistungsumsatz bei nichtsinusf\"ormigen periodischen Gr\"ossen}
 		\begin{minipage}[c]{7.5cm}
@@ -309,8 +326,6 @@
 	$S_{1Tr} < S_{2Tr}$ da der Trafo keine Gleichstr\"ome übertr\"agt. Somit erscheint der Prim\"arstrom
 	als Sekund\"arstrom mit unterdrücktem Gleichstromanteil.			
 	\end{minipage}
-
-\newpage
 
 	\begin{minipage}[c]{8cm} 
 	   \textbf{Beispiel anhand eines Brückengleichrichters:}	  	\\
