@@ -1,5 +1,5 @@
 \section{Wechselstromtechnik}
-	\subsection{Periodisch zeitabhängige Grössen}
+	\subsection{Periodisch zeitabh\"angige Gr\"ossen}
  %		\subsubsection{Periodische Schwingungen}
  %			\begin{tabular}{p{6cm}p{4.5cm}p{7.5cm}}
  %				Frequenz &
@@ -40,30 +40,46 @@
                     \end{minipage}
             \end{tabular}
 
-		\subsubsection{Mittelwerte periodischer Grössen}
-			\begin{tabular}{p{5.5cm}p{5cm}p{7.5cm}}
-			\input{sections/snipptes/mittelwerte}
+		\subsubsection{Mittelwerte periodischer Gr\"ossen}
+			\begin{tabular}{|p{5.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+				Arithmetischer Mittelwert, Gleichwert, Linearer MW &
+				$X_0 = \overline{X} = X_m = \frac {1} {T} \int\limits_{t_0}^{t_0+T} x(t)dt$ &
+				Ist die Fl\"ache unter der Zeitfunktion \"uber eine Periode. \\
+			\hline
+				Quadratischer MW, Leistung &
+				$X^2 = \frac {1} {T} \int\limits_{t_0}^{t_0+T} x^2(t)dt$ & 
+				$X^n = \frac {1} {T} \int\limits_{t_0}^{t_0+T} x^n(t)dt$ (MW $n$. Ordnung) \\
+			\hline
+				Effektivwert &
+				$X = X_{\text{eff}}= \sqrt{X^2} = \sqrt{\frac{1}{T} \int\limits ^{t_0+T} _{t_0}{x^2(t)dt}}$
+				& \\ 
+			\hline
+				Gleichrichtwert &
+				$X_{|m|} = \bar{|X|} = \frac{1}{T} \int\limits_{t_0}^{t_0+T}{|x(t)| dt}$ &
+				Arithm. Mittelwert der Zweiweggleichrichterschaltung \\
+			\hline				    
 				Energie der Periode $T$ &
-					\fbox{$W_T = \int\limits_{t_0}^{t_0+T}{P(t) dt}$} &
-					\begin{minipage}{7.5cm}
-                    	ist die Energie positiv, nimmt der Zweipol Energie auf
-                    \end{minipage} \\
+				$W_T = \int\limits_{t_0}^{t_0+T}{P(t) dt}$ &
+				ist die Energie positiv, nimmt der Zweipol Energie auf \\
+			\hline                    
 				Wirkleistung &
-					\fbox{$P = \frac{1}{T} \int\limits_{t_0}^{t_0+T}{P(t) dt}$} \\ \\
+				$P = \frac{1}{T} \int\limits_{t_0}^{t_0+T}{P(t) dt}$ & \\
+			\hline
 			\end{tabular}
  
 			\begin{tabular}{p{5.5cm}p{5cm}p{7.5cm}}
-				\textbf{Verhältniszahlen}
+				\textbf{Verh\"altniszahlen}
 				&	Scheitelfaktor $k_s$ (crest factor): &
 						$k_s = \frac{\text{Scheitelwert}}{\text{Effektivwert}} = \frac{\hat{u}}{U}$ \\ \\
 				&	Formfaktor F (form factor): &
 						$F = \frac{\text{Effektivwert}}{\text{Gleichrichtwert}} = \frac{U}{|\bar{u}|}$ \\ \\
 				&	Schwingungsgehalt: &
-						$s = \frac{\text{Effektivwert des Wechselsignals}}{\text{Effektivwert der Mischgrösse}}$ \\ \\
+						$s = \frac{\text{Effektivwert des Wechselsignals}}{\text{Effektivwert der Mischgr\"osse}}$ \\ \\
 				&	Effektive Welligkeit: &
-						$\frac{\text{Effektivwert des Wechselsignals}}{\text{Gleichwert der Mischgrösse}}$ \\ \\
+						$\frac{\text{Effektivwert des Wechselsignals}}{\text{Gleichwert der Mischgr\"osse}}$ \\ \\
 				&	Riffelfaktor: &
-						$\frac{\text{Scheitelwert des Wechselsignals}}{\text{Gleichwert der Mischgrösse}}$ \\ \\
+						$\frac{\text{Scheitelwert des Wechselsignals}}{\text{Gleichwert der Mischgr\"osse}}$ \\ \\
 			\end{tabular}
 
 			\begin{tabular}{p{5.5cm}p{5cm}p{7.5cm}}
@@ -96,17 +112,17 @@
 			 		\end{tabular}
 				\end{minipage} &
 				\begin{minipage}{12.5cm}
-                	Wähle im Graph der Aufgabenstellung, das den Strom i(t) darstellt, innerhalb
+                	W\"ahle im Graph der Aufgabenstellung, das den Strom i(t) darstellt, innerhalb
 					der Periode $T$ eine ungerade Anzahl von $\boldsymbol{n}$ \textbf{Stützstellen} in konstanten
-					\textbf{Abständen }$\boldsymbol{h}=\frac{T}{n-1}$ (z.B $T=20ms, n=11$ mit $h=2 ms$). Lese an
+					\textbf{Abst\"anden }$\boldsymbol{h}=\frac{T}{n-1}$ (z.B $T=20ms, n=11$ mit $h=2 ms$). Lese an
 					diesen Stellen jeweils den Augenblickswert des Stromes ab und tragen ihn in eine Tabelle ein (s.l). Berechne anschliessend für jede 
 					Stützstelle den Wert von $i^2$ und den Summanden $m \cdot i^2$. Der \textbf{Faktor}
 					$\boldsymbol{m}$ wird wie folgt gebildet: Für ungerade n ist m=4; bei der ersten und bei der
 					letzten Stützstelle ist m=1, bei den übrigen ist m=2.
                 \end{minipage}
 			\end{tabular}
-	\subsection{Sinusförmige Schwingungen von Spannung und Strom}
-% 		\subsubsection{Erzeugung sinusförmiger Schwingungen}
+	\subsection{Sinusf\"ormige Schwingungen von Spannung und Strom}
+% 		\subsubsection{Erzeugung sinusf\"ormiger Schwingungen}
 % 			\begin{minipage}[t]{6cm}
 %             	\textbf{Bewegte Leiter im \\ homogenen Magnetfeld}
 %             \end{minipage}
@@ -121,12 +137,12 @@
 % 			\begin{minipage}{3.5cm}
 %             	\includegraphics[width=3.5cm]{bilder/KreisfoermigeBewegung.png}
 %             \end{minipage}
-% 		\subsubsection{Beschreibung sinusförmiger Spannungen und Ströme}
+% 		\subsubsection{Beschreibung sinusf\"ormiger Spannungen und Str\"ome}
 % 			\begin{tabular}{p{6cm}p{4.5cm}p{7.5cm}}
 %             	\textbf{Kreisfrequenz} &
 %             		\fbox{$\omega = \frac{2 \pi}{T} = 2 \pi f$} &
 %             		$[\omega] = s^{-1}$ \\ \\
-%             	\textbf{Effektivwert für sinusförmige Grössen} &
+%             	\textbf{Effektivwert für sinusf\"ormige Gr\"ossen} &
 %             		\fbox{$U = \frac{\hat{u}}{\sqrt{2}} \quad I = \frac{\hat{i}}{\sqrt{2}}$}
 %             \end{tabular}
 		\subsubsection{Komplexe Zeiger}
@@ -170,51 +186,53 @@
 				& $G$: Wirkleitwert (Konduktanz); 
 				& $B$: Blindleitwert (Suszeptanz)
 	      	\end{tabular} \\ \\
-			\begin{tabular}{p{2cm}p{12cm}p{5cm}}
+			\begin{tabular}{|l|l|l|l|l|}
+			\hline
 				\textbf{Widerstand} &
-					$ \boxed{\underline{Z_R} = R} \quad \boxed{\underline{Y} = G =
-					\frac{1}{R}}$ &
-						\begin{minipage}{8cm}
-	                    	\includegraphics[height=1cm]{bilder/Wirkwiderstand.png}
-	                    	\includegraphics[width=1cm]{bilder/WirkwiderstandZeiger.png}
-	                    \end{minipage} \\ \\
-				\textbf{Induktivität} &
-					$ \boxed{\underline{Z_L} = j \omega L = j X_L} \quad
-					\boxed{\underline{Y_L} = - \frac{j}{\omega L} = j B_L} \quad
-					\boxed{W_L=\frac12 L I_L^2}$ &
-						\begin{minipage}{8cm}
-		                    \includegraphics[height=1cm]{bilder/Spule.png}
-		                    \includegraphics[width=1cm]{bilder/SpuleZeiger.png}
-		                \end{minipage} \\ \\
+					$ \underline{Z_R} = R$ &
+					$ \underline{Y} = G =\frac{1}{R}$ &
+					&
+					\includegraphics[height=1cm,angle=90]{bilder/Wirkwiderstand.png}
+                	\includegraphics[width=1cm]{bilder/WirkwiderstandZeiger.png} \\
+			\hline	                    
+				\textbf{Induktivit\"at} &
+					$ \underline{Z_L} = j \omega L = j X_L$&
+					$\underline{Y_L} = - \frac{j}{\omega L} = j B_L$ &
+					$W_L=\frac12 L I_L^2$ &
+					
+		            \includegraphics[height=1cm,angle=90]{bilder/Spule.png}
+		            \includegraphics[width=1cm]{bilder/SpuleZeiger.png}
+		            \\
+			\hline		                
 				\textbf{Kondensator} &
-					$ \boxed{\underline{Z_C} = \frac{1}{j \omega C} = - \frac{j}{\omega C} = j
-					X_C \quad (X_C < 0)} \quad \boxed{\underline{Y_C} = j \omega C = j B_C} \quad
-					\boxed{W_C=\frac12 C U_C^2}$ &
-						\begin{minipage}{8cm}
-		                    \includegraphics[height=0.8cm]{bilder/Kondensator.png}
-		                    \includegraphics[width=1cm]{bilder/KondensatorZeiger.png}
-		                \end{minipage} \\ \\
+					$ \underline{Z_C} = \frac{1}{j \omega C} = - \frac{j}{\omega C} = j
+					X_C $ &
+					$  (X_C < 0) \quad \underline{Y_C} = j \omega C = j B_C $&
+					$W_C=\frac12 C U_C^2$ &
+		            \includegraphics[height=0.8cm,angle=90]{bilder/Kondensator.png}
+		            \includegraphics[width=1cm]{bilder/KondensatorZeiger.png}\\
+			\hline	                
 			\end{tabular}
 		\subsubsection{Berechnung linearer Wechselstromnetzwerke}
 		\subsubsection{Leistung im Wechselstromnetzwerk}% \formelbuch{162}}
 				\begin{tabular}{p{7cm}p{4.5cm}p{7cm}}
 					Komplexe Leistung &
-						\fbox{$ \underline{S} = \underline{U} \cdot \underline{I}^\ast = U\cdot I \cdot e^{j(\varphi_u-\varphi_i)}$ }  &
+						$ \underline{S} = \underline{U} \cdot \underline{I}^\ast = U\cdot I \cdot e^{j(\varphi_u-\varphi_i)}$   &
 						Konjugiert Komplexer Strom! \\
 					Wirkleistung &
-						\fbox{$ P = \Real(\underline{S}) = U I \cos(\varphi) $ } \\
+						$ P = \Real(\underline{S}) = U I \cos(\varphi) $ \\
 					Blindleistung &
-						\fbox{$ Q = \Imag(\underline{S}) = U I \sin(\varphi) $ } &
+						$ Q = \Imag(\underline{S}) = U I \sin(\varphi) $ &
 						Kapazitiv: $Q < 0$; induktiv: $Q > 0$ \\
 					Scheinleistung &
-						\fbox{$ S = | \underline{S} | = U I = \frac{U^2}{R} = I^2 R$ } \\
+						$ S = | \underline{S} | = U I = \frac{U^2}{R} = I^2 R$ \\
 					Leistungsfaktor &
-						\fbox{$\lambda = \frac{P}{S} = \frac{P}{UI} = \cos \varphi$} \\
+						$\lambda = \frac{P}{S} = \frac{P}{UI} = \cos \varphi$ \\
 				\end{tabular}
 		\subsubsection{Blindleistungskompensation (mit Kondensator)}
 		\input{sections/snipptes/blindleistungskompensation}
 		
-		\subsubsection{Leistungsumsatz bei nichtsinusförmigen periodischen Grössen}
+		\subsubsection{Leistungsumsatz bei nichtsinusf\"ormigen periodischen Gr\"ossen}
 		\begin{minipage}[c]{7.5cm}
 			\includegraphics[height=4cm]{../WS_DST/bilder/ZeigerdiagrammNichtSinus.png}     
     	\end{minipage}
@@ -241,7 +259,7 @@
      	\end{minipage}    		\\ \\
      	Die Verzerrungsblindleistung wird von den Oberwellen und ev. von der Unterwelle (je
      	nach Phasenverschiebung) verursacht und ist mit Kondensatoren \textbf{nicht} zu kompensieren -
-     	Aktive Filter wären nötig.
+     	Aktive Filter w\"aren n\"otig.
 		\\		
 		
 	\begin{minipage}[c]{8cm} 
@@ -257,7 +275,7 @@
 		\begin{tabular}{| l | l |}
     		\hline 
       		\textbf{Bezeichnung}
-      		%& \textbf{Näherungsformel}
+      		%& \textbf{N\"aherungsformel}
       		& \textbf{Formel} \\
       		\hline
       		Scheitelwert 
@@ -278,7 +296,7 @@
       		Laststrom
       		%& $I_{TRMS} = 0.35355 \cdot A$
       		& $I_{d} =\frac{\hat{U}_s}{2 R}$ \\
-      		Primärstrom
+      		Prim\"arstrom
       		& $I_1 \approx I_U \cdot \frac{1.21}{"u}$ \\
       		Bauleistung 
       		& $S_{TR} = \frac{S_{1Tr} + S_{2Tr}}{2}$ \\
@@ -287,8 +305,8 @@
 	\end{minipage}   
 	\begin{minipage}[c]{8cm}  
 			\includegraphics[width=8cm]{../WS_DST/bilder/EinwegGR.png}  \\			
-	$S_{1Tr} < S_{2Tr}$ da der Trafo keine Gleichströme überträgt. Somit erscheint der Primärstrom
-	als Sekundärstrom mit unterdrücktem Gleichstromanteil.			
+	$S_{1Tr} < S_{2Tr}$ da der Trafo keine Gleichstr\"ome übertr\"agt. Somit erscheint der Prim\"arstrom
+	als Sekund\"arstrom mit unterdrücktem Gleichstromanteil.			
 	\end{minipage}
 
 \newpage
@@ -304,7 +322,7 @@
 		\begin{tabular}{| l | l |}
     		\hline 
       		\textbf{Bezeichnung}
-      		%& \textbf{Näherungsformel}
+      		%& \textbf{N\"aherungsformel}
       		& \textbf{Formel} \\
       		\hline
       		Scheitelwert 
@@ -330,7 +348,7 @@
       		& $I_{d eff} =  \frac{U_s}{R}= \frac{\hat{U}_d}{\sqrt{2}R}$ \\ 
       		Diodenstrom
       		& $I_{V} = \frac{\hat{U}}{2 R} = \frac{I_{d eff}}{\sqrt{2}}$ \\
-      		Primärstrom
+      		Prim\"arstrom
       		& $I_1 \approx I_U \cdot \frac{0.966}{"u}$ \\
       		Bauleistung 
       		& $S_{TR} = \frac{S_{1Tr} + S_{2Tr}}{2}$ \\
@@ -339,6 +357,6 @@
 	\end{minipage}   
 	\begin{minipage}[c]{8cm}  
 			\includegraphics[width=7cm]{../WS_DST/bilder/brueckengleichrichter.png}  \\			
-	$S_{1Tr} < S_{2Tr}$ da der Trafo keine Gleichströme überträgt. Somit erscheint der Primärstrom
-	als Sekundärstrom mit unterdrücktem Gleichstromanteil.			
+	$S_{1Tr} < S_{2Tr}$ da der Trafo keine Gleichstr\"ome übertr\"agt. Somit erscheint der Prim\"arstrom
+	als Sekund\"arstrom mit unterdrücktem Gleichstromanteil.			
 	\end{minipage}
