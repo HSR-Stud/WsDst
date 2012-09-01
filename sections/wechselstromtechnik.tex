@@ -215,6 +215,7 @@
 			\hline	                
 			\end{tabular}
 		\subsubsection{Berechnung linearer Wechselstromnetzwerke}
+		
 		\subsubsection{Leistung im Wechselstromnetzwerk}% \formelbuch{162}}
 				\begin{tabular}{p{4.5cm}p{7cm}p{7cm}}
 					Komplexe Leistung &
@@ -234,20 +235,23 @@
 		\input{sections/snipptes/blindleistungskompensation}
 		\begin{multicols}{2}
 			\subsubsection{RL Serieschaltung}
-				$P\left[W\right]=\frac{U^2_R\left[V\right]}{R_r\left[\Omega\right]}$\\
-				$U_R=U_0\left[V\right]\cdot cos\varphi$\\
-				$R_r\left[\Omega\right]=\frac{U^2_R\left[V\right]}{P\left[VA\right]}$\\
-				$tan\varphi =\frac{\omega L_r}{R_r}$\\
-				$L_r\left[H\right]=\frac{R_r \cdot tan \varphi}{\omega}$
+				\begin{align*}
+					P			&= \frac{U_R^2}{R_r}					& [W]		&= \frac{[V]}{[\Omega]}\\
+					U_R			&= U_0 \cdot \cos\varphi				& [V]		& \\
+					R_r			&= \frac{U_R^2}{P}						& [\Omega]	&= \frac{[V]^2}{[V A]} \\
+					tan\varphi	&= \frac{\omega L_r}{R_r}				& 			& \\
+					L_r			&= \frac{R_r \cdot tan\varphi}{\omega}	& [H]		& 
+				\end{align*}
+
 				\columnbreak
 				
 			\subsubsection{RL Parallelschaltung}
-				$P\left[W\right]=\frac{U^2_R\left[V\right]}{R_p\left[\Omega\right]}$\\
-				$R_p=\frac{U^2\left[V\right]}{P\left[VA\right]}$\\
-				$tan\varphi = \frac{\frac{1}{\omega L_p}}{\frac{1}{R_p}}=\frac{R_p}{\omega
-				L_p}$\\
-				$L_p= \frac{R_p}{\omega \cdot tan\varphi}$
-				
+				\begin{align*}
+					P			&= \frac{U^2}{R_r}					& [W]		&= \frac{[V]}{[\Omega]}\\
+					R_r			&= \frac{U^2}{P}						& [\Omega]	&= \frac{[V]^2}{[V A]} \\
+					tan\varphi	&= \frac{R_p}{\omega L_p}				&			& \\
+					L_p			&= \frac{R_p}{\omega \cdot tan\varphi}	& 			& 				
+				\end{align*}				
 		\end{multicols}
 		
 		\subsubsection{Leistungsumsatz bei nichtsinusf\"ormigen periodischen Gr\"ossen}
