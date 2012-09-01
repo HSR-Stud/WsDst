@@ -1,5 +1,6 @@
 WS_DST.pdf
 tmp/*
+*.synctex*
 *.acn
 *.acr
 *.alg
@@ -27,7 +28,6 @@ tmp/*
 *.pdfsync
 *.ps
 *.snm
-*.synctex.gz
 *.toc
 *.vrb
 *.xdy
