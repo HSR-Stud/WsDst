@@ -1,0 +1,29 @@
+\begin{circuitikz}[european]
+	\draw (0,0) coordinate (In1) {} 
+		to[short, *-, i=$\underline{I_1}$] ++(1,0)
+		to[R, l=$R_1$] ++(2,0)
+		to[L, l=$jX_{\sigma 1}$] ++(2,0)
+		to[short, -*] ++(1,0) coordinate (middle1) {}
+		to[short] ++(1,0)
+		to[L, l=$jX'_{\sigma 2}$] ++(2,0)
+		to[R, l=$R'_2$] ++(2,0)
+		to[short, -* ,i<=$\underline{I_2}$] ++(1,0) coordinate(Out1);
+	\draw (middle1) to[short, -*] ++(0,-1) coordinate (middle2) {};
+	\draw (middle2) -- ++(-1,0) 
+		to[R, l=$R_{Fe}$] ++(0,-2)
+		to[short, -*] ++(1,0) coordinate(middle3)
+		to[short, -*] ++(0,-1) coordinate(middle4);
+	\draw (middle2) -- ++(1,0)
+		to[L, l=$jX_h$] ++(0,-2)
+		to[short] (middle3);
+	\draw (middle4) to[short, -*] ++(-6,0) coordinate(In2);
+	\draw (middle4) to[short, -*] ++(6,0) coordinate(Out2);
+	\begin{scope}[
+		shorten <=10pt,
+		shorten >= 10pt,
+		->
+	]
+		\draw (In1) -- (In2) node[midway, right] {$\underline{U_1}$};
+		\draw (Out1) -- (Out2) node[midway, left] {$\underline{U'_2}$};
+	\end{scope}
+\end{circuitikz}
