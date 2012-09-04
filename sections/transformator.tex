@@ -41,11 +41,9 @@
 					wobei $\frac{2\pi}{\sqrt{2}} = 4.44$ und $\hat{B} \cdot A = \hat{\Phi}$ 
 			\end{tabular}
 	\subsection{Der reale (einphasige) Transformator}
-	Für Dreiphasige Transfromatoren bei die Spannung mit dem Faktor $\sqrt(3)$
-	teilen, bei Leistungen  Strom und Spannung mit dem Faktor $3$
-	Multiplizieren um alle drei Phasen abzudecken.\\
+		Für dreiphasige Trafos müssen die angegebenen Werte zuerst normiert werden (siehe Kapitel 3).
 		\subsubsection{Ersetzen der magnetischen Kopplung}
-			\begin{tabular}{p{5.8cm}p{8cm}p{4.5cm}}
+			\begin{tabular}{p{5.8cm}p{7.3cm}p{4.5cm}}
             	Spannung, Strom &
             		$U_2' = U_2 \cdot \frac{N_1}{N_2}$ \quad 
             		$I_2' = I_2 \cdot \frac{N_2}{N_1}$ \\
@@ -55,9 +53,8 @@
             		$R_2' = R_2 \cdot (\frac{N_1}{N_2})^2$ \quad 
             		$X_{\sigma 2}' = X_{\sigma 2} \cdot (\frac{N_1}{N_2})^2$ \\
             	Vollst\"andiges Ersatzschaltbild &
-            		\begin{minipage}{8cm}
-	            		\adjustbox{width=6cm}{\input{tikz/trafo_ersatzschaltbild}}	            		
-	            	\end{minipage} &
+            	\adjustbox{width=6cm}{\input{tikz/trafo_ersatzschaltbild}}
+            	&
 					\begin{minipage}{4.5cm}
                     	\tiny
                     		$R_1, R_2'$: Widerstand Spule\\ \\
@@ -70,6 +67,7 @@
 					& $\underline{U}_2' = R_2'\cdot\underline{I}_2' + jX_{\sigma 2}'\cdot\underline{I}_2' + jX_h\cdot(\underline{I}_1+\underline{I}_2')$
 
             \end{tabular}
+            
             	Für mittlere Transformatorenleistungen erbgeben sich etwa folgende Relationen zwischen
             	den einzelnen $R$s und $X$s:
             	$$ R_1 : R_2' : X_{\sigma 1} : X_{\sigma 2}' : X_h : R_{Fe} \approx 1:1:2:2:1000:10000	$$
