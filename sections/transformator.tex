@@ -128,17 +128,19 @@
 				\multicolumn{2}{p{11cm}} {
 					Mit Kurzschlussdaten $R_1$ und $X_{\sigma1}$ ausrechnen. $R_{Fe}$ und $X_h$ vernachl\"assigen.
 				}
-				& \multirow{3}{*}{
+				& \multirow{2}{*}{
 	            	\adjustbox{width=6.5cm}{\input{tikz/trafo_kurzschluss}}
 	              }
 	            \\
-				Kurzschlussimpedanz&
+				Kurzschlussimpedanz &
 					$\underline{Z}_k = R_k + jX_k$ \\
 					& $Z_k = \frac{U_k}{I_k}$ \\
 					& $R_k = R_1 + R_2' = \cos{\varphi_k} \cdot Z_k  = \frac{P_k}{I_k^2}$  \\
 					& $X_k = X_{\sigma1} + X_{\sigma2}' = \sin{\varphi_k} \cdot Z_k = \frac{Q_k}{I_k^2}$ \\
-				Leistungsfaktor im Kurzschluss&
-					$\cos(\varphi_k) = \frac{P_k}{U_k \cdot I_k} = \frac{P_k}{S_k}$ \\
+				Leistungsfaktor im Kurzschluss &
+					$\cos(\varphi_k) = \frac{P_k}{U_k \cdot I_k} = \frac{P_k}{S_k}$	& $U_R = U_k \cos\varphi_k$\\
+					& $P_k = I_{1N} \cdot U_k \cdot \cos\varphi_k$ 					& $U_\sigma = U_k \sin\varphi_k$ \\
+					&																& $R_k=\frac{U_R}{I_{1N}} \qquad X_k = \frac{U_\sigma}{I_{1N}}$
              \end{tabular}
 
 		\subsubsection{Spannungs\"anderung bei Belastung}

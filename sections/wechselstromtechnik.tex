@@ -60,7 +60,7 @@
 				Arithm. Mittelwert der Zweiweggleichrichterschaltung \\
 			\hline				    
 				Energie der Periode $T$ &
-				$W_T = \int\limits_{t_0}^{t_0+T}{P(t) dt}$ &
+				$W_T = \int\limits_{t_0}^{t_0+T}{P(t) dt} = \frac{X^2}{R}$ &
 				ist die Energie positiv, nimmt der Zweipol Energie auf \\
 			\hline                    
 				Wirkleistung &
@@ -234,7 +234,7 @@
 		\subsubsection{Blindleistungskompensation (mit Kondensator)}
 		\input{sections/snipptes/blindleistungskompensation}
 		\begin{multicols}{2}
-			\subsubsection{RL Serieschaltung}
+			\subsubsection{RL Serieschaltung / Reihenschaltung}
 				\begin{align*}
 					P			&= \frac{U_R^2}{R_r}					& [W]		&= \frac{[V]}{[\Omega]}\\
 					U_R			&= U_0 \cdot \cos\varphi				& [V]		& \\
@@ -248,7 +248,8 @@
 					P			&= \frac{U^2}{R_p}						& [W]		&= \frac{[V]}{[\Omega]}\\
 					R_p			&= \frac{U^2}{P}						& [\Omega]	&= \frac{[V]^2}{[V A]} \\
 					tan\varphi	&= \frac{R_p}{\omega L_p}				&			& \\
-					L_p			&= \frac{R_p}{\omega \cdot tan\varphi}	& [H]		&
+					L_p			&= \frac{R_p}{\omega \cdot \tan\varphi}	& [H]		& \\
+					I_L			&= I_R \tan\varphi
 				\end{align*}
 		\end{multicols}
 
