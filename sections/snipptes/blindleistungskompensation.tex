@@ -1,4 +1,4 @@
-
+\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{p{7cm}p{4.5cm}p{5cm}}
 	Kompensation mit C &
     	\begin{minipage}{4cm}
@@ -14,8 +14,9 @@
         \end{minipage} \\ \\
 	Neue (kompensierte) Blindleistung &
 		$Q_{Lk} = P \cdot \tan{\varphi_k}$ \\
-	Blindleistung des Kondensators &
-		$Q_C = Q_{Lk} - Q_L$ \\
+	Blindleistung des Kondensators & 
+		\multicolumn{2}{l}{$Q_C = Q_{Lk} - Q_L =  P\cdot (\tan{\varphi_k}-\tan{\varphi}) $} \\
 	Kapazität des Kondensators &
-		$C = \frac{Q_C}{\omega U^2}$ \\	
+		$C = - \frac{Q_C}{\omega U^2}$ \\	
 	\end{tabular}
+\renewcommand{\arraystretch}{1}
