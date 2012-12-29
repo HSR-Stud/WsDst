@@ -17,7 +17,7 @@
 						\includegraphics[width=3.5cm]{bilder/GrundstruckturTrafo.png}
 					\end{minipage} \\
 				Leistungsbilanz &
-					$\underline{S}_1 = \underline{S}_2$ &
+					$\underline{S}_1 = \underline{S}_2$ 
 					oder $\underline{U}_2 \cdot \underline{I}_2^* = \underline{U}_1 \cdot \underline{I}_1^*$ \\
 				Scheinwiderstandsübersetztung &
 					$\underline{Z}_{aU} = \frac{|\underline{U}_1|^2}{|\underline{U}_2|^2} \cdot \underline{Z}_a = \text{ü}^2 \cdot \underline{Z}_a$ &
@@ -25,30 +25,37 @@
 	            		\includegraphics[width=3.5cm]{bilder/IdealerTravoImpedanzwandler.png}
 	            	\end{minipage}
 			\end{tabular}
-		%TODO: 02.02.12 DK, Newpage wieder entfernen wen möglich 
-		\newpage
+
 		
-		\subsubsection{Verlustloser und Streuungsfreier Trafo}
-			\input{sections/snipptes/trafo} 	
+		\subsubsection{Verlustloser und Streuungsfreier Trafo (VST)}
+			\input{sections/snipptes/trafo} 
+		\renewcommand{\arraystretch}{1.5}	
 		\subsubsection{Transformatoren-Hauptgleichung (gilt bei Leerlauf)}
-			\begin{tabular}{p{7cm}p{4.5cm}p{5cm}}
-      			$| \hat{u}_{10} | = \hat{i}_0 \cdot X_{L1}$
-      			& 	$\hat{u}_{10} = \hat{i}_0 \cdot \omega \cdot L_1$ \\
+			\begin{tabular}{p{7cm}p{4cm}p{6cm}}
+      			$\boxed{U_{10} = \frac{2\pi}{\sqrt{2}}N_1 \cdot f \cdot \hat{B}_1 \cdot A}$
+      			& 	$|\hat{u}_{10}| = \hat{i}_0 \cdot \omega \cdot L_1$ & Mit $\omega = 2\pi \cdot f$ und $L_1 = N_1 \cdot \frac{\hat{\Phi}_{10}}{\hat{i}_0}$ folgt: \\
       		
-				$U_{20} = \frac{2\pi}{\sqrt{2}}N_2 f \hat{B}_1 A$
-				&
-            	$U_{10} = \frac{2\pi}{\sqrt{2}}N_1 f \hat{B}_1 A$ &
-					wobei $\frac{2\pi}{\sqrt{2}} = 4.44$ und $\hat{B} \cdot A = \hat{\Phi}$ 
+				$\boxed{U_{20} = \frac{2\pi}{\sqrt{2}}N_2 \cdot f \cdot \hat{B}_1 \cdot A}$
+				& $|\hat{u}_{10}| = 2\pi N_1 \cdot f \cdot \hat{\Phi}_{10} $
+            	& Leerlauferregerfluss durchsetzt magn. Kreis $\bot$:$ \hat{\Phi}_{10} = \hat{B}_1 \cdot A $. So folgt: \\
+				
+				wobei $\frac{2\pi}{\sqrt{2}} = 4.44$ und $\hat{B} \cdot A = \hat{\Phi}$ &
+				$|\hat{u}_{10}| = 2\pi N_1 \cdot f \cdot \hat{B}_1 \cdot A	$
 			\end{tabular}
+		\renewcommand{\arraystretch}{1}	
+		
+	\newpage
 	\subsection{Der reale (einphasige) Transformator}
 		Für dreiphasige Trafos müssen die angegebenen Werte zuerst normiert werden (siehe Kapitel 3).
+	
+		\renewcommand{\arraystretch}{1.25}
 		\subsubsection{Ersetzen der magnetischen Kopplung}
 			\begin{tabular}{p{5.8cm}p{7.3cm}p{4.5cm}}
             	Spannung, Strom &
             		$U_2' = U_2 \cdot \frac{N_1}{N_2}$ \quad 
             		$I_2' = I_2 \cdot \frac{N_2}{N_1}$ \\
             	Nennstrom & 
-            		$I_N = S_N / U_N$
+            		$I_N = S_N / U_N$ \\
             	Widerstand, Streufluss &
             		$R_2' = R_2 \cdot (\frac{N_1}{N_2})^2$ \quad 
             		$X_{\sigma 2}' = X_{\sigma 2} \cdot (\frac{N_1}{N_2})^2$ \\
@@ -70,59 +77,69 @@
             
             	Für mittlere Transformatorenleistungen erbgeben sich etwa folgende Relationen zwischen
             	den einzelnen $R$s und $X$s:
-            	$$ R_1 : R_2' : X_{\sigma 1} : X_{\sigma 2}' : X_h : R_{Fe} \approx 1:1:2:2:1000:10000	$$
-            	
+            	$$\boxed{ R_1 : R_2' : X_{\sigma 1} : X_{\sigma 2}' : X_h : R_{Fe} \approx 1:1:2:2:1000:10000}	$$
+    
+        \renewcommand{\arraystretch}{1.5}   
 		\subsubsection{Leerlauf und Magnetisierung}
 			\begin{tabular}{p{5cm}p{6cm}p{7cm}}
             	Rechnen &
             		\begin{minipage}{13cm}
-                    	Mit Leerlaufdaten $R_{Fe}$ und $X_h$ ausrechnen. $R_1$ und $X_{\sigma1}$ vernachl\"assigen.
+                    	Mit Leerlaufdaten $R_{Fe}$ und $X_h$ ausrechnen. \underline{$R_1$ und $X_{\sigma1}$ vernachl\"assigen.}
                     \end{minipage} \\ \\
             	Induktiver Leerlaufstrom &
-            		$\underline{I}_{10} = \underline{I}_{1Fe} + \underline{I}_{1\mu}$ $(\underline{I}_{1\mu} \gg \underline{I}_{1Fe})$ &
-            		\begin{minipage}{8cm}
+            		$\underline{I}_{10} = \underline{I}_{1Fe} + \underline{I}_{1\mu}$ \quad $(\underline{I}_{1\mu} \gg \underline{I}_{1Fe})$ &
+            		\begin{minipage}{7cm}
 	            		\adjustbox{width=6cm}{\input{tikz/trafo_leerlauf}}
 	            	\end{minipage} \\ \\
 				Magnetisierungsstrom &
-					$i_\mu = \sqrt{2}I_{\mu1}\cdot \sin(\omega t) + \sqrt{2}I_{\mu3}\cdot \sin(3\omega t) + \sqrt{2}I_{\mu m}\cdot \sin(m\omega t)$ &
-					\hspace{3.3cm}$(m=2n+1 \hspace{0.3cm} n\epsilon \mathbb{N}_0)$ \\
-					&
-					Für den Effektivwert des Stromes: &
-					$I_{\mu RMS} = \sqrt{I_{\mu1}^2 + I_{\mu3}^2 +\ldots+ I_{\mu m}} $\\ \\
+					\multicolumn{2}{l}{
+					$i_\mu = \sqrt{2}I_{\mu 1}\cdot \sin(\omega t) + \sqrt{2}I_{\mu 3}\cdot \sin(3\omega t) + \ldots + \sqrt{2}I_{\mu m}\cdot \sin(m\omega t)$
+					\quad$(m=2n+1 \hspace{0.3cm} n\in \mathbb{N}_0)$ 
+					}\\
+				&
+					$I_{\mu RMS} = \sqrt{{I_{\mu 1}}^2 + {I_{\mu 3}}^2 +\ldots+ {I_{\mu m}}^2} $\\ 
 				Leerlaufverluste &
 					$P_0 = P_{0Cu} + P_{0Hy} + P_{0Wi}$ \\
+				Kupferverluste &
+					$P_{Cu} = {I_0}^2 \cdot R_{Cu}$\\
 				Hystreseverluste &
 					$P_{Hy} \sim f \cdot B^2$ \\
 				Wirbelstromverluste &
-					$v_W = c_W \cdot f^2 \cdot B^2$ &
+					$P_W = c_W \cdot f^2 \cdot B^2$ &
 					$c_W$ ist materialabh\"angige Konstante \\
 				Relativer Leerlaufstrom &
 					$i_{0N} = \frac{I_{0N}}{I_{1N}}$ &
 					$I_{1N}$ ist eingangsseitiger Nennstrom \\
 				Eisenverluststrom &
-					$I_{Fe} = \frac{P_{0N}}{U_{1N}} = I_0 \cdot \cos(\varphi_0)$ \\
+					$I_{Fe} \approx \frac{P_{0N}}{U_{1N}} \approx I_0 \cdot \cos(\varphi_0)$ \\
 				Eisenverlustwiderstand &
-					$R_{Fe} = \frac{U_{1N}^2}{P_{0N}} = \frac{P_{0N}}{I_{Fe}^2}$ \\
+					$R_{Fe} \approx \frac{U_{1N}^2}{P_{0N}} \approx \frac{P_{0N}}{I_{Fe}^2}$ \\
 				Hauptreaktanz &
 					$X_h = L_h \omega = \frac{U_{1N}}{I_{\mu}} = \frac{U_{1N}^2}{Q_{0N}}
 					=
 					\frac{Q_{0N}}{I_{\mu}^2}$
-					& $Q_{0N} = \sqrt{S_{0N}^2 - P_{0N}^2}$ \\
+					& mit $Q_{0N} = \sqrt{S_{0N}^2 - P_{0N}^2}$ \\
 				Magnetisierungsstrom &
-					$I_\mu = I_{0N} \cdot \sin(\varphi_0) = \sqrt{I_0^2 - I_{Fe}^2}$&
-					\begin{minipage}{7cm}
-                    	\begin{tabular}{p{2.5cm}p{3.5cm}}
-	                    	\begin{minipage}{2.5cm}
-	                        	\adjustbox{height=1.5cm}{\input{tikz/trafo_zeigerdiagrammRealLeerlauf}}
-	                        \end{minipage} &
-							\begin{minipage}{3.5cm}
-	                       		oder $\hat{I}_{\mu} = \frac{\hat{H}_{Fe} \cdot l_{Fe}}{N_1}$
-	                        \end{minipage}
-						\end{tabular}
-	            	\end{minipage} \\
+					$I_\mu = I_{0} \cdot \sin(\varphi_0) = \sqrt{I_0^2 - I_{Fe}^2}$&
+					oder $\hat{I}_{\mu} = \frac{\hat{H}_{Fe} \cdot l_{Fe}}{N_1}$ \\
+	%				\begin{minipage}{7cm}
+%                   	\begin{tabular}{p{2.5cm}p{3.5cm}}
+%	                    	\begin{minipage}{2.5cm}
+                     	%\adjustbox{height=1.5cm}{\input{tikz/trafo_zeigerdiagrammRealLeerlauf}}
+	                     %   \end{minipage} &
+						%	\begin{minipage}{3.5cm}
+	                       	%	oder $\hat{I}_{\mu} = \frac{\hat{H}_{Fe} \cdot l_{Fe}}{N_1}$
+	                       % \end{minipage}
+					%	\end{tabular}
+	            %	\end{minipage}
+	            
 				Leistungsfaktor im Leerlauf &
-					$\cos(\varphi_0) = \frac{P_{0N}}{I_{0N} \cdot U_{1N}}$ \\
+					$\cos(\varphi_0) = \frac{P_{0N}}{I_{0N} \cdot U_{1N}}$ & \multirow{2}{*}{\adjustbox{height=2cm}{\input{tikz/trafo_zeigerdiagrammRealLeerlauf} }}\\\\
+				Leerlaufstrom &
+					$I_0 = \sqrt{{I_{\mu}}^2 + {I_{Fe}}^2}$
             \end{tabular}
+            
+        \renewcommand{\arraystretch}{1.0}
 		\subsubsection{Kurzschluss}
 			\begin{tabular}{p{5cm}p{6cm}p{7cm}}
 				\multicolumn{2}{p{11cm}} {
