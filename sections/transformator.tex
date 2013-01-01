@@ -97,7 +97,7 @@
 					\quad$(m=2n+1 \hspace{0.3cm} n\in \mathbb{N}_0)$ 
 					}\\
 				&
-					$I_{\mu RMS} = \sqrt{{I_{\mu 1}}^2 + {I_{\mu 3}}^2 +\ldots+ {I_{\mu m}}^2} $\\ 
+					$I_{\mu RMS} = \sqrt{{I_{\mu 1}}^2 + {I_{\mu 3}}^2 +\ldots+ {I_{\mu m}}^2} $\\ \\
 				Leerlaufverluste &
 					$P_0 = P_{0Cu} + P_{0Hy} + P_{0Wi}$ \\
 				Kupferverluste &
@@ -121,64 +121,62 @@
 					& mit $Q_{0N} = \sqrt{S_{0N}^2 - P_{0N}^2}$ \\
 				Magnetisierungsstrom &
 					$I_\mu = I_{0} \cdot \sin(\varphi_0) = \sqrt{I_0^2 - I_{Fe}^2}$&
-					oder $\hat{I}_{\mu} = \frac{\hat{H}_{Fe} \cdot l_{Fe}}{N_1}$ \\
-	%				\begin{minipage}{7cm}
-%                   	\begin{tabular}{p{2.5cm}p{3.5cm}}
-%	                    	\begin{minipage}{2.5cm}
-                     	%\adjustbox{height=1.5cm}{\input{tikz/trafo_zeigerdiagrammRealLeerlauf}}
-	                     %   \end{minipage} &
-						%	\begin{minipage}{3.5cm}
-	                       	%	oder $\hat{I}_{\mu} = \frac{\hat{H}_{Fe} \cdot l_{Fe}}{N_1}$
-	                       % \end{minipage}
-					%	\end{tabular}
-	            %	\end{minipage}
-	            
-				Leistungsfaktor im Leerlauf &
+					oder $\hat{I}_{\mu} = \frac{\hat{H}_{Fe} \cdot l_{Fe}}{N_1} \Leftrightarrow I_{\mu} = \frac{\hat{H}_{Fe} \cdot l_{Fe}}{\sqrt{2}\cdot N_1}$ \\
+
+				Leistungsfaktor i m Leerlauf &
 					$\cos(\varphi_0) = \frac{P_{0N}}{I_{0N} \cdot U_{1N}}$ & \multirow{2}{*}{\adjustbox{height=2cm}{\input{tikz/trafo_zeigerdiagrammRealLeerlauf} }}\\\\
 				Leerlaufstrom &
 					$I_0 = \sqrt{{I_{\mu}}^2 + {I_{Fe}}^2}$
             \end{tabular}
             
-        \renewcommand{\arraystretch}{1.0}
+        \renewcommand{\arraystretch}{1.25}
 		\subsubsection{Kurzschluss}
 			\begin{tabular}{p{5cm}p{6cm}p{7cm}}
-				\multicolumn{2}{p{11cm}} {
-					Mit Kurzschlussdaten $R_1$ und $X_{\sigma1}$ ausrechnen. $R_{Fe}$ und $X_h$ vernachl\"assigen.
+				\multicolumn{3}{p{18cm}} {
+					Mit Kurzschlussdaten $R_1$ und $X_{\sigma1}$ ausrechnen. \underline{$R_{Fe}$ und $X_h$ vernachl\"assigen.}
 				}
-				& \multirow{2}{*}{
-	            	\adjustbox{width=6.5cm}{\input{tikz/trafo_kurzschluss}}
-	              }
+			
 	            \\
 				Kurzschlussimpedanz &
-					$\underline{Z}_k = R_k + jX_k$ \\
-					& $Z_k = \frac{U_k}{I_k}$ \\
+					$\underline{Z}_k = R_k + jX_k = \frac{\underline{U}_k}{\underline{I}_k}$& \multirow{2}{*}{
+										\adjustbox{width=6.5cm}{\input{tikz/trafo_kurzschluss}}
+											              }\\
+					& $Z_k = \frac{U_k}{I_k}$ & \\
 					& $R_k = R_1 + R_2' = \cos{\varphi_k} \cdot Z_k  = \frac{P_k}{I_k^2}$  \\
 					& $X_k = X_{\sigma1} + X_{\sigma2}' = \sin{\varphi_k} \cdot Z_k = \frac{Q_k}{I_k^2}$ \\
 				Leistungsfaktor im Kurzschluss &
 					$\cos(\varphi_k) = \frac{P_k}{U_k \cdot I_k} = \frac{P_k}{S_k}$	& $U_R = U_k \cos\varphi_k$\\
 					& $P_k = I_{1N} \cdot U_k \cdot \cos\varphi_k$ 					& $U_\sigma = U_k \sin\varphi_k$ \\
-					&																& $R_k=\frac{U_R}{I_{1N}} \qquad X_k = \frac{U_\sigma}{I_{1N}}$
+					&																& $R_k=\frac{U_R}{I_{1N}} \qquad X_k = \frac{U_\sigma}{I_{1N}}$\\
+				Dauer-Kurschluss-Strom&
+					$ \underline{I}_{1k} = \frac{\underline{U}_1}{\underline{Z}_k}$\\
+				Nennkurzschlussspannung&
+					$ U_Z = I_{1N} \cdot Z_k$\\	
+				&	$ u_z = \frac{U_Z}{U_{1N}}$
              \end{tabular}
-
+		\renewcommand{\arraystretch}{1.5}
+	
 		\subsubsection{Spannungs\"anderung bei Belastung}
-			\begin{tabular}{p{10cm}p{6cm}}
-            		\begin{minipage}{10cm}
-	            		$\underline{U}_1 =
-	            		\underline{U}_R+\underline{U}_X+\underline{U}_2'$ \qquad
-	            		$\underline{U}_2'=\underline{U}_2 \cdot "u$\\ \\
-	            		$\underline{U}_R=R_k \cdot \underline{I}_1$ \qquad
-	            		$\underline{U}_X=jX_k \cdot \underline{I}_1$\qquad
-	            		$\underline{I}_2' = \underline{I}_1$\\
-	            		\end{minipage} &
-            		\begin{minipage}{6cm}
-	            		\includegraphics[width=5cm]{bilder/ErsatzschaltbildTrafoLast.png}
-	            	\end{minipage}\\			
-            \end{tabular}\\ \\
+		\paragraph{Komplexe Rechnung}$\;$\\
+			\begin{tabular}{p{5cm}p{5cm}p{6cm}}
+	            		$\boxed{\underline{U}_1 =
+	            		\underline{U}_R+\underline{U}_X+\underline{U}_2'}$ & 
+	            		$\boxed{\underline{I}_2' = \underline{I}_1}$ &
+	            		\multirow{3}{*}{
+	            		\parbox{6cm}{\includegraphics[width=5cm]{bilder/ErsatzschaltbildTrafoLast.png}}}
+	            			            	\\		
+	            		$\underline{U}_R=R_k \cdot \underline{I}_1$ &
+	            		$\underline{U}_X=jX_k \cdot \underline{I}_1$ \\
+	            		$\underline{U}_2'=\underline{U}_2 \cdot "u = \underline{I}_2' \cdot \underline{Z}'  $\\
+	            		$\underline{Z}' = \underline{Z} \cdot {"u}^2$ \\
+            \end{tabular}\\
+		\renewcommand{\arraystretch}{1.0}
 
-			\begin{tabular}{p{8cm}|p{10cm}}
+		\paragraph{Graphische Rechnung}$\;$\\			\begin{tabular}{p{8cm}|p{10cm}}
 	 			\textbf{Zeigerdiagramme} & \textbf{Kappsches Dreieck}\\
 				\begin{minipage}{8cm}
 	            	\includegraphics[width=8cm]{bilder/KappschesDreieck_1.png}
+	            	$\varphi = \varphi_{_2} \qquad $
 	            \end{minipage}  & \hspace{0.2cm}
 				\begin{minipage}{10cm} 
 		        	\begin{minipage}{2.5cm}
@@ -186,13 +184,15 @@
 		            \end{minipage}
 					\begin{minipage}{7.5cm}
 		      			$$u_{\varphi} = u_{\varphi'} + 1 - \sqrt{1 - u_{\varphi''}^2}$$
-		      			$$ u_\varphi \approx u_{\varphi'}\quad (\text{für }u_k
-		      			=\frac{U_k}{U_{N}} \cdot 100\% < 4 \%)$$
-		      			$$u_{\varphi'} = u_r \cdot \cos \varphi + u_x
-		      			\cdot \sin \varphi$$ $$u_{\varphi''} = u_x \cdot \cos \varphi - u_r \cdot \sin \varphi$$
-		      			$$ u_r = \frac{R_k I}{U_N} \qquad u_x = \frac{X_k I}{U_N} $$
-		      			$$ U_2 = \frac{U_N}{"u} - \Delta U_2 = \frac{U_1}{"u} - \frac{1}{"u}
-		      			U_N u_\varphi $$\\
+		      			$$ \boxed{u_\varphi \approx u_{\varphi'}}\quad (\text{für }u_z
+		      			=\frac{U_Z}{U_{N}} \cdot 100\% < 4 \%)$$
+		      			$$u_{\varphi'} = n \cdot u_r \cdot \cos \varphi + n \cdot u_x
+		      			\cdot \sin \varphi$$ $$u_{\varphi''} = n \cdot u_x \cdot \cos \varphi - n \cdot u_r \cdot \sin \varphi$$
+		      			$$\text{Lastfaktor } n = \frac{I_1}{I_{1N}}$$
+		      			$$ u_r = \frac{R_k \cdot I}{U_N} \qquad u_x = \frac{X_k \cdot I}{U_N} $$
+		      			$$ U_2 = \frac{U_1}{"u} - \Delta U_2 = \frac{U_1}{"u} - \frac{1}{"u}
+		      			U_N u_\varphi $$
+		      			$$ \Delta U_2 \approx \frac{1}{"u} \cdot (U_R \cdot \cos \varphi + U_X \cdot \sin \varphi)$$\\
 		      		\end{minipage}         
                 \end{minipage}\\
 				\begin{minipage}{8cm}
@@ -201,49 +201,53 @@
                      	< 0$\\ rein ohmsche & induktive & kapazitive\\
                      	Last & Last & Last\\
                      	&&\\
-                     	&&\\
-                     	&&\\
-                     	&&\\
+                     	Konstruktion: & 1. $\underline{U}_2'$ senkrecht&\\
+                     	& 2. $\underline{I}_1$ mit $\varphi$ zu $\underline{U}_2'$\\
+                     	& \multicolumn{2}{l}{3. $\underline{U}_R$ in Phase mit $\underline{I}_1$ }\\
+                     	& \multicolumn{2}{l}{4. Kappsches Dreieck $\Rightarrow \underline{U}_1$}
                      \end{tabular}               
                 \end{minipage}& \hspace{0.2cm}
 				\begin{minipage}{10cm}
 		      		Beim kappschen Dreieck wird mit ``genormten'' Gr\"ossen (klein $u$) gerechnet: 
-		      		$u = \frac{U_{Strang}}{U_{N, Strang}} = \frac{U_X}{U_1} \qquad
+		      		$u = \frac{U_{Strang}}{U_{N, Strang}} = \frac{U_X}{U_N} \qquad
 		      		\boldsymbol{U_N = U_1} $\\ \\ Das Kappsche Dreieck dreht sich um die
-		      		Spitze der Prim\"arspannung. Bei konstantem Strom und variablem $cos(\varphi)$ beschreibt ${u}_2'$
+		      		Spitze der Prim\"arspannung. Bei konstantem Strom und variablem $\cos(\varphi)$ beschreibt ${u}_2'$
 		      		einen
 		      		Kreis um die Prim\"arspannung.\\ Bei \textbf{kapazitiver Last steigt}
-		      		die Sekund\"arspannung über den Leerlaufwert an. \\                  
+		      		die Sekund\"arspannung über den Leerlaufwert an. \\ 
+		      		\textbf{Ähnlichkeitssatz:}\\
+		      		\"Andert sich $U_2$ oder $U_1$ so ändern sich alle Gr\"ossen masst\"ablich\\
+		      		Bsp.: $\boxed{U_{2_{neu}} = U_{2_{alt}} \cdot \frac{U_{1_{neu}}}{U_{1_{alt}}}}$ \\              
                 \end{minipage}     
             \end{tabular}
 
 		
 		\subsubsection{Wirkungsgrad des Trafos}
-			\begin{tabular}{p{5cm}p{7cm}p{7cm}}
+			\begin{tabular}{p{4.5cm}p{7cm}p{7.5cm}}
             	Wirkungsgrad &
-            		$\eta = 1-\dfrac{P_{V0} + P_{VK} \cdot
+            		$\eta = 1- \dfrac{P_V}{P_B} = 1-\dfrac{P_{V0} + P_{VK} \cdot
             		(\frac{P_B}{P_N})^2}{P_B} $ &
             	\begin{minipage}{7cm}
-                	$P_B$ = Betriebsnennleistung\\
+                	$P_B$ = Betriebsnennleistung = $P_1$\\
                 	$P_{N}$ = Nennleistung\\
-                	$P_{V0}$ = Leerlaufverlustleistung\\
-                	$P_{VK}$ = Kurzschlussverlustleistung                	
+                	$P_{V0}$ = Leerlaufverlustleistung = $P_{{Fe}_N}$\\
+                	$P_{VK}$ = Kurzschlussverlustleistung = $P_{{Cu}_N}$             	
                 \end{minipage}\\ \\
             	 &
             		$\eta = 1 - \dfrac{a + (\frac{P_B}{P_N})^2}{P_B} P_{VK}$ &
             	\begin{minipage}{7cm}
- 					$a = \dfrac{P_{V0}}{P_{VK}}$                	
+ 					$a = \dfrac{P_{V0}}{P_{VK}}$ = Verlustverh"altnis                	
                 \end{minipage}\\ \\            		
             	 &
             		$\eta = 1 - \frac{P_{V0}+P_{VK}}{P_B} $ 
             		& (bei Wirkleistungsvollast) \\ \\
             	Maximaler Wirkungsgrad
-            	& $S_{\eta-max} = \sqrt{a} \cdot S_N$ $P_{\eta-max} = \sqrt{a}
+            	& $S_{\eta-max} = \sqrt{a} \cdot S_N$ \quad $P_{\eta-max} = \sqrt{a}
             	\cdot P_N$
             	& (Kupferverluste = Eisenverluste)
             \end{tabular}	
 
-\newpage
+%\newpage
 	\subsection{Transformatoren Kühlmittel}
 		\begin{center}
 	    	\includegraphics[width=19cm]{bilder/Kuehlmittel.png}
