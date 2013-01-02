@@ -9,9 +9,10 @@
             	$\underline{U}_2$ ist gegenüber $\underline{U}_1$ 
 				$120^{\circ}$ nacheilend, $\underline{U}_3$ gegenüber $\underline{U}_1$ $240^{\circ}$.  \\ \\
 				Somit gilt (bei symmetrischer Belastung): \\
-				$\underline{U}_2 = \underline{U}_1 \cdot e^{j (-120^{\circ})}; \underline{U}_3
+				$\underline{U}_2 = \underline{U}_1 \cdot e^{j (-120^{\circ})} \qquad \underline{U}_3
 				= \underline{U}_1 \cdot e^{j (-240^{\circ})} = \underline{U}_1 \cdot e^{j
-				(120^{\circ})}$
+				(120^{\circ})}$\\
+				$\underline{U}_1 +\underline{U}_2 + \underline{U}_3 = 0 \qquad \underline{I}_1 +\underline{I}_2 + \underline{I}_3 = 0$
             \end{minipage}
         \end{tabular}
 		
@@ -32,32 +33,36 @@
 	 			\vspace{0.2cm}
 	 				%\textbf{Zeigerdiagramm} & & \\ 
 	 				&
-	 					\includegraphics[width=5cm]{bilder/Sternspannung.png} &
-	 					\includegraphics[width=5cm]{bilder/Dreieckstrom.png} \\
+	 					\parbox[c][3.5cm][c]{5cm}{\includegraphics[width=5cm]{bilder/Sternspannung.png}} &
+	 					\parbox[c][3.5cm][c]{5cm}{\includegraphics[width=5cm]{bilder/Dreieckstrom.png}} \\
 						
-					Phasenverschiebung &
-						$U_{12} = 400V; U_{23} = 400Ve^{-j120^\circ}; U_{31} = 400Ve^{j120^\circ}$&
-						\\
+					%Phasenverschiebung &
+					%	$\underline{U}_{12} = 400V; \underline{U}_{23} = 400Ve^{-j120^\circ}; \underline{U}_{31} = 400Ve^{j120^\circ}$&
+					%	\\
 		 			Verkettete Spannung &
-		 				$U = U_{Str} \cdot \sqrt{3}$ \hspace{0.2cm} $\underline{U} = \underline{U}_{Str} \cdot \sqrt{3} \cdot e^{j 30^\circ}$ &
-		 				$U = U_{Str}$ \hspace{0.2cm} $\underline{U} = \underline{U}_{Str}$ \\
+		 				$U = U_{Str} \cdot \sqrt{3} \qquad \underline{U} = \underline{U}_{Str} \cdot \sqrt{3} \cdot e^{j 30^\circ}$ &
+		 				%$U = U_{Str}$ \hspace{0.2cm}
+		 				$\underline{U} = \underline{U}_{Str}$ \\
 		 			Aussenleiterströme &
-		 				$I = I_{Str}$ \hspace{0.2cm} $\underline{I} = \underline{I}_{Str}$ &
-		 				$I = I_{Str} \cdot \sqrt{3} $ \hspace{0.2cm} $\underline{I} =
+		 				%$I = I_{Str}$ \hspace{0.2cm}
+		 				$\underline{I} = \underline{I}_{Str}$ &
+		 				$I = I_{Str} \cdot \sqrt{3}  \qquad \underline{I} =
 		 				\underline{I}_{Str} \cdot \sqrt{3} \cdot e^{-j 30^\circ} $ \\
 					Gesamt-Scheinleistung &
-						$S = 3 \cdot S_{Str} =\sqrt{3} \cdot U \cdot I $ \hspace{0.2cm} in [VA]
-		 				& $S = 3 \cdot S_{Str} = \sqrt{3} \cdot U \cdot I$ \hspace{0.2cm} in [VA] \\ Scheinleistung pro Strang &
-						\multicolumn{2}{l|}{\hspace{3cm} $S_{Str} = U_{Str} \cdot I_{Str} ~~~ \underline{S}_{Str} = \underline{U}_{Str} \cdot \underline{I}_{Str}^\ast$ \hspace{0.2cm} in [VA]} \\
+						\multicolumn{2}{c|}{$S = 3 \cdot S_{Str} =\sqrt{3} \cdot U \cdot I $ \hspace{0.2cm} in [VA]}\\
+		 			Scheinleistung pro Strang &
+						\multicolumn{2}{c|}{ 
+						 %$S_{Str} = U_{Str} \cdot I_{Str} \qquad
+						  $\underline{S}_{Str} = \underline{U}_{Str} \cdot \underline{I}_{Str}^\ast$ \hspace{0.2cm} in [VA]} \\
 		 			Wirkleistung &
-		 				\multicolumn{2}{l|}{\hspace{3cm} $P = S \cdot \cos\varphi = \sqrt{3} \cdot U \cdot I \cdot \cos\varphi$ \hspace{0.2cm} in [W]} \\
+		 				\multicolumn{2}{c|}{ $P = S \cdot \cos\varphi = \sqrt{3} \cdot U \cdot I \cdot \cos\varphi$ \hspace{0.2cm} in [W]} \\
 		 			Blindleistung &
-		 				\multicolumn{2}{l|}{\hspace{3cm} $Q = S \cdot \sin\varphi = \sqrt{3} \cdot U \cdot I \cdot \sin\varphi$ \hspace{0.2cm} in [var]} \\
-% 		 			Wirkarbeit &
-% 		 				\multicolumn{2}{l|}{\hspace{3cm} $W = P \cdot t = \sqrt{3} \cdot U \cdot I \cdot cos\varphi \cdot t$ \hspace{0.2cm} in $[Ws, kWh]$} \\
+		 				\multicolumn{2}{c|}{ $Q = S \cdot \sin\varphi = \sqrt{3} \cdot U \cdot I \cdot \sin\varphi$ \hspace{0.2cm} in [var]} \\
+ 		 			Wirkarbeit &
+ 		 				\multicolumn{2}{l|}{\hspace{3cm} $W = P \cdot t = \sqrt{3} \cdot U \cdot I \cdot cos\varphi \cdot t$ \hspace{0.2cm} in $[Ws, kWh]$} \\
 % 		 				&\multicolumn{2}{c|}{}\\
-% 		 			Blindarbeit &
-% 		 				\multicolumn{2}{l|}{\hspace{3cm} $W_b = Q \cdot t = \sqrt{3} \cdot U \cdot I \cdot sin\varphi \cdot t$ \hspace{0.2cm} in $[varh, kvarh]$} \\
+ 		 			Blindarbeit &
+ 		 				\multicolumn{2}{l|}{\hspace{3cm} $W_b = Q \cdot t = \sqrt{3} \cdot U \cdot I \cdot sin\varphi \cdot t$ \hspace{0.2cm} in $[varh, kvarh]$} \\
 	 			\hline
 			\end{tabular}
         \renewcommand{\arraystretch}{1}
@@ -69,6 +74,9 @@
                 	\includegraphics[width=5cm]{bilder/ZeigerdarstellungVerschobenerSternpunkt.png}
                 \end{minipage} &
 				\begin{minipage}{13cm}
+					\begin{center}
+						$ \underline{U}_{12}; \underline{U}_{23}; \underline{U}_{31} \Rightarrow const$
+					\end{center}
                 	$\underline{U}_{12} = \underline{U}_{1N'} - \underline{U}_{2N'}$ \hspace{0.3cm}
                 	$\underline{U}_{1N'} = \underline{U}_{1N} + \underline{U}_{NN'}$ \hspace{0.3cm}
                 	$\underline{I}_1 = \underline{Y}_1 \cdot \underline{U}_{1N'} = \underline{Y}_1 \cdot (\underline{U}_{1N} + \underline{U}_{NN'})$ \\
@@ -105,7 +113,9 @@
 	Bei gleichen Kapazit\"aten:
 	&$C_Y = C_\triangle \cdot 3 $ \\
 	Bei gleichen Induktivit\"aten:
-	&$L_Y = \frac{L_\triangle}{3}$
+	&$L_Y = \frac{L_\triangle}{3}$\\
+	Leistung:
+	& $ S_{\Delta} = 3 \cdot S_Y$
 	  \end{tabular}
       \renewcommand{\arraystretch}{1}
 	  \end{minipage}
@@ -114,7 +124,8 @@
 	\subsection{Defektleistung von symmetrischen Drehstromverbrauchern}
 		\begin{tabular}{| p{7.5cm} | l | l |}
 			\hline
- 				& Normalleistung		& Defektleistung\\
+ 				& Normalleistung		& Defektleistung \\
+ 				&&($P_{Def_{Str}}$ = Restleistung pro intaktem Strang) \\
  			\hline
 	 			\textbf{Y-Schaltung bei Leiter- oder Strangausfall} ohne Neutralleiter &
 	 				$P_{Norm} = 3 \cdot \frac{U^2_{Str}}{R} = \frac{U^2}{R}$ &
@@ -122,14 +133,46 @@
 	 			&&\\
 	 			\textbf{Y-Schaltung bei Leiter- oder Strangausfall} mit Neutralleiter &
 	 				$P_{Norm} = 3 \cdot \frac{U^2_{Str}}{R} = \frac{U^2}{R}$ &
-	 				$P_{Def} = 2 \cdot \frac{U^2_{Str}}{R} = \frac{2}{3} \frac{U^2}{R}$ \tiny{nur 66\% von
-	 				$P_{Norm}$} \\ &&\\
+	 				$P_{Def_{Str}} = \frac{U^2_{Str}}{R} = \frac{1}{3} \frac{U^2}{R}$ \tiny{nur 33\% von
+	 				$P_{Norm}$ pro Strang} \\ &&\\
 	 			\textbf{$\Delta$-Schaltung bei Leiterausfall} &
 	 				$P_{Norm} = 3 \cdot \frac{U^2}{R}$ &
 	 				$P_{Def} = \frac{U^2}{R} + \frac{U^2}{2R} = \frac{3U^2}{2R}$ \tiny{nur 50\% von $P_{Norm}$} \\
 	 			&&\\
 	 			\textbf{$\Delta$-Schaltung bei Strangausfall} &
 	 				$P_{Norm} = 3 \cdot \frac{U^2}{R}$ &
-	 				$P_{Def} = 2 \cdot \frac{U^2}{R}$ \tiny{nur 66\% von $P_{Norm}$} \\
+	 				$P_{Def_{Str}} = \frac{U^2}{R}$ \tiny{nur 33\% von $P_{Norm}$ pro Strang} \\
 	 		\hline
 		 \end{tabular} 
+		 
+	\subsection{Leistungsfaktorverbesserung}
+		\subsubsection{... durch Zuschalten einer Wirkleistung P}
+			\begin{tabular}{m{6cm} m{6cm}}
+				\includegraphics[width=6cm]{bilder/Leistungsfaktorverbesserung_Zuschalten_Wirkleitsung.png}&
+				$P_2 = \dfrac{Q_L}{\tan \varphi_2} - \dfrac{Q_L}{\tan \varphi_1}$
+			\end{tabular}
+		
+		\subsubsection{... durch Zuschalten von Kondensatoren}
+			\begin{tabular}{p{5cm} | p{5cm} p{6cm}}
+				\textbf{Sternschaltung} &
+				\textbf{Dreieckschaltung} \\
+				\parbox[b][2.5cm][t]{5cm}{\includegraphics[width=4cm]{bilder/Leistungsfaktorverbesserung_Zuschalten_Kondensator_Stern.png}}
+								&
+				\parbox[b][2.5cm][t]{5cm}{\includegraphics[width=4cm]{bilder/Leistungsfaktorverbesserung_Zuschalten_Kondensator_Dreieck.png}}\\
+				\multicolumn{2}{c}{
+					$C = \dfrac{Q_c}{3 \cdot U_c^2 \cdot \omega}$
+				}\\
+				\multicolumn{2}{c}{
+					$Q_c = P \cdot (\tan \varphi_1 - \tan \varphi_2) $ 
+				} &
+				\parbox{6cm}{
+					$\varphi_1$ = Phasenwinkel unkompensiert\\
+					$\varphi_2$ = Phasenwinkel kompensiert 
+				} \\
+				$U_c = \dfrac{U}{\sqrt{3}}$&
+				$U_c = U$\\
+				\multicolumn{2}{c}{
+					$C_{\Delta} = \dfrac{C_Y}{3}$
+				}			
+				
+			\end{tabular}
