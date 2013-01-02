@@ -1,10 +1,10 @@
 \begin{circuitikz}[european]
-	\draw (0,0) node (in) {} to[short, *-, i=$\underline{I_1}$] ++(1,0)
+	\draw (0,0) node (in) {} to[short, *-, i=$\underline{I}_1$] ++(1,0)
 		to[R, l=$R_1$] ++ (2,0)
 		to[L, l=$jX_{\sigma 1}$] ++(2,0)
 		to[L, l=$jX^`_{\sigma 2}$] ++(2,0)
 		to[R, l=$R^`_2 $] ++(2,0)
 		-- ++(0,-2) to[short, -*] (0,-2) node (out) {};
 	\draw[shorten >= 5pt, shorten <= 5pt, ->] (in) -- (out)
-		node[midway, right] {$\underline{U_1}$};	
+		node[midway, right] {$\underline{U}_1$};	
 \end{circuitikz}
