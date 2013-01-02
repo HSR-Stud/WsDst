@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+  \begin{scope}[->]
+    \draw (0,-5) -- (0,-1) node[midway, right] {$\underline{U}_2'$};
+    
+    \draw[green!50!black] (0,-1) -- (1,0) node[midway, right] {$\underline{U}_R$};
+    \draw[blue] (1,0) -- (-1,2) node[midway, right] {$\underline{U}_X$};    
+    \draw[blue!60!white] (0,-1) -- (-1,2) node[midway, right] {$\underline{U}_V$};    
+    
+    \draw[violet] (0,-5) -- (-1,2) node[midway, left] {$\underline{U}_1$};    
+    
+    \draw[red] (0,-5) -- (1,-4) node[midway, right] {$\underline{I}_1$};
+   \end{scope}
+   
+  % Rechter Winkel
+   \rechterWinkel{1,0}{133}
+   % Schraffierte Fläche
+   \begin{pgfonlayer}{bg}
+     \fill[pattern=north east lines, pattern color=black!20] (0,-1) -- (1,0) -- (-1,2);
+   \end{pgfonlayer}
+   
+   % Phi
+   \draw (0,-1) -- (0,-0.1);
+   \draw (0,-1) +(90:0.5cm) arc[radius=0.5cm, start angle=90, delta angle=-44] node[above] {$\varphi$};
+   \draw (0,-5) +(90:0.5cm) arc[radius=0.5cm, start angle=90, delta angle=-44] node[above] {$\varphi$};
+   
+\end{tikzpicture}

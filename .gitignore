@@ -1,6 +1,7 @@
 WS_DST.pdf
 tmp/*
 *.synctex*
+*.tex.preview.pdf
 *.acn
 *.acr
 *.alg

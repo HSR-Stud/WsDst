@@ -160,9 +160,25 @@
 
 			\begin{tabular}{p{8cm}|p{10cm}}
 	 			\textbf{Zeigerdiagramme} & \textbf{Kappsches Dreieck}\\
+	 			
 				\begin{minipage}{8cm}
-	            	\includegraphics[width=8cm]{bilder/KappschesDreieck_1.png}
-	            \end{minipage}  & \hspace{0.2cm}
+	            	\begin{multicols}{3}
+	            	  \adjustbox{width=2.5cm, set vsize={7cm}{0cm}}{\input{tikz/zeigerdiagramme/LastOhmsch}}
+	            	  $\quad \varphi = 0$ \\
+	            	  rein ohmsche Last
+	            	  \columnbreak
+	            	  
+	            	  \adjustbox{width=2.5cm, set vsize={7cm}{0cm}}{\input{tikz/zeigerdiagramme/LastInduktiv}}
+	            	  $\quad\varphi > 0$ \\
+	            	  rein induktive Last
+	            	  \columnbreak
+	            	  
+	            	  \adjustbox{width=2.5cm, set vsize={7cm}{0cm}}{\input{tikz/zeigerdiagramme/LastKapazitiv}}
+	            	  $\quad\varphi < 0$ \\
+	            	  rein kapazitive Last	            	  
+	            	\end{multicols}
+	            \end{minipage}  & \hspace{0.2cm} \vspace{-4cm}
+	            
 				\begin{minipage}{10cm} 
 		        	\begin{minipage}{2.5cm}
 						\includegraphics[width=3cm]{bilder/KappschesDreieck.png}
@@ -177,18 +193,9 @@
 		      			$$ U_2 = \frac{U_N}{"u} - \Delta U_2 = \frac{U_1}{"u} - \frac{1}{"u}
 		      			U_N u_\varphi $$\\
 		      		\end{minipage}         
-                \end{minipage}\\
-				\begin{minipage}{8cm}
- 					\begin{tabular}[c]{p{2.66cm}p{2.66cm}p{2.66cm}}
-                     	$\quad \varphi = 0$ & $\quad\varphi > 0$ & $\quad\varphi
-                     	< 0$\\ rein ohmsche & induktive & kapazitive\\
-                     	Last & Last & Last\\
-                     	&&\\
-                     	&&\\
-                     	&&\\
-                     	&&\\
-                     \end{tabular}               
-                \end{minipage}& \hspace{0.2cm}
+                \end{minipage}
+                \\                
+                & \hspace{0.2cm}
 				\begin{minipage}{10cm}
 		      		Beim kappschen Dreieck wird mit ``genormten'' Gr\"ossen (klein $u$) gerechnet: 
 		      		$u = \frac{U_{Strang}}{U_{N, Strang}} = \frac{U_X}{U_1} \qquad
@@ -197,7 +204,7 @@
 		      		einen
 		      		Kreis um die Prim\"arspannung.\\ Bei \textbf{kapazitiver Last steigt}
 		      		die Sekund\"arspannung über den Leerlaufwert an. \\                  
-                \end{minipage}     
+                \end{minipage}    
             \end{tabular}
 
 		
