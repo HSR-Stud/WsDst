@@ -178,10 +178,22 @@
 
 		\paragraph{Graphische Rechnung}$\;$\\			\begin{tabular}{p{8cm}|p{10cm}}
 	 			\textbf{Zeigerdiagramme} & \textbf{Kappsches Dreieck}\\
+	 			
 				\begin{minipage}{8cm}
-	            	\includegraphics[width=8cm]{bilder/KappschesDreieck_1.png}
-	            	$\varphi = \varphi_{_2} \qquad $
-	            \end{minipage}  & \hspace{0.2cm}
+	            	\begin{multicols}{3}
+	            	  \adjustbox{width=2.5cm, set vsize={7cm}{0cm}}{\input{tikz/zeigerdiagramme/LastOhmsch}}
+	            	  
+	            	  \columnbreak
+	            	  
+	            	  \adjustbox{width=2.5cm, set vsize={7cm}{0cm}}{\input{tikz/zeigerdiagramme/LastInduktiv}}
+	            	  
+	            	  \columnbreak
+	            	  
+	            	  \adjustbox{width=2.5cm, set vsize={7cm}{0cm}}{\input{tikz/zeigerdiagramme/LastKapazitiv}}\\  	  
+	            	\end{multicols}
+	            \end{minipage}  & 
+	            \hspace{0.2cm} 
+	            \vspace{-4cm}
 				\begin{minipage}{10cm} 
 		        	\begin{minipage}{2.5cm}
 						\includegraphics[width=3cm]{bilder/KappschesDreieck.png}
@@ -200,6 +212,7 @@
 		      		\end{minipage}         
                 \end{minipage}\\
 				\begin{minipage}{8cm}
+					\vspace*{-2cm}
  					\begin{tabular}[c]{p{2.66cm}p{2.66cm}p{2.66cm}}
                      	$\quad \varphi = 0$ & $\quad\varphi > 0$ & $\quad\varphi
                      	< 0$\\ rein ohmsche & induktive & kapazitive\\

@@ -16,7 +16,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{header/header}
 
+% TikZ zeugs:
 \usepackage{circuitikz}
+\usetikzlibrary{patterns}
+\pgfdeclarelayer{bg}    % declare background layer
+\pgfsetlayers{bg,main}
+\newcommand*{\rechterWinkelRadius}{.25cm}
+\newcommand*{\rechterWinkel}[2]{% #1 = point, #2 = start angle
+   \draw[shift={(#2:\rechterWinkelRadius)}] (#1) arc[start angle=#2, delta angle=90, radius = \rechterWinkelRadius];
+   \fill[shift={(#2+45:\rechterWinkelRadius/2)}] (#1) circle[radius=1.25\pgflinewidth];
+}
+
+
 \usepackage{adjustbox}
 
 %Paragraphe ebenfalls nummerieren
