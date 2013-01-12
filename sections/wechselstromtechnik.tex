@@ -293,36 +293,42 @@
 	\end{minipage}   
 		
 	\begin{minipage}[c]{10cm}  
-		\begin{tabular}{| l | l |}
+		\begin{tabular}{| l | l | l |}
     		\hline 
       		\textbf{Bezeichnung}
-      		%& \textbf{N\"aherungsformel}
+      		& \textbf{rel. Wert$^\ast$}
       		& \textbf{Formel} \\
       		\hline
-      		Scheitelwert 
-      		%& %& $\hat{I} = 0.7071 \cdot A $
-      		& $\hat{I} = \hat{I}_d = \frac{\hat{U}_d}{R} $ \\
-      		Unterwelle (Mittelwert)
-      		%& $I_U = 0.22508 \cdot A $
-      		& $I_U = \bar{I}_d = \frac{\hat{I}}{\pi}$ \\
+      		Scheitelwert
+      		& $\hat{I} = \sqrt{2} = 1,414$
+      		& $= \hat{I}_d = \frac{\hat{U}_d}{R} $ \\
+      		Mittelwert (DC)
+      		& $I_m = 0.45$
+      		& $= \bar{I}_d = \frac{\hat{I}}{\pi}$ \\
       		Grundwelle
-      		%& $I_G = 0.25 \cdot A$ 
-      		& $I_G = \frac{\hat{I}}{2 \cdot \sqrt{2}}$ \\
-      		Oberwelle
-      		%& $I_O = 0.10881 \cdot A$ 
-      		& $I_O = \frac{\hat{I}}{\sqrt{2}} \cdot 0.21762$ \\
-      		%Effektivwert (RMS)
-      		%& $I_{RMS} = 0.27265 \cdot A$
-      		%& $I_{RMS} = \sqrt{I_G^2 + I_O^2}$ \\
+      		& $I_G = 0.5$
+      		& $= \frac{\hat{I}}{2 \cdot \sqrt{2}}$ \\
+      		Oberwellen
+      		& $I_O = 0.2162$
+      		& $= \frac{\hat{I}}{\sqrt{2}} \cdot 0.21762$ \\
+      		Effektivwert (AC)
+      		& $I_{RMS} = 0.5433$
+      		& $ = \sqrt{I_G^2 + i_O^2}$\\
+      		True RMS
+      		& $I_{TRMS} = 0.7071$
+      		& $= \sqrt{I_m^2 + I_G^2 + i_O^2}$ \\
       		Laststrom
-      		%& $I_{TRMS} = 0.35355 \cdot A$
+      		&
       		& $I_{d} =\frac{\hat{U}_s}{2 R}$ \\
-      		Prim\"arstrom
+      		Primärstrom
+      		&
       		& $I_1 \approx I_U \cdot \frac{1.21}{"u}$ \\
       		Bauleistung 
+      		&
       		& $S_{TR} = \frac{S_{1Tr} + S_{2Tr}}{2}$ \\
       		\hline 
-    	\end{tabular}
+    	\end{tabular} \newline
+    	$^\ast$: bezogen auf $I_{Eff} = 1A$ im AC-Stromkreis ohne Diode
 	\end{minipage}   
 	\begin{minipage}[c]{8cm}  
 			\includegraphics[width=8cm]{bilder/EinwegGR.png}  \\			
