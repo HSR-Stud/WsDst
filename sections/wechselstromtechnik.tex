@@ -32,11 +32,11 @@
 				Arithm. Mittelwert der Zweiweggleichrichterschaltung \\
 			\hline				    
 				Energie der Periode $T$ &
-				$W_T = \int\limits_{t_0}^{t_0+T}{P(t) dt}$ &
+				$W_T = \int\limits_{t_0}^{t_0+T}{p(t) dt}$ &
 				ist die Energie positiv, nimmt der Zweipol Energie auf \\
 			\hline                    
 				Wirkleistung &
-				$P = \frac{1}{T} \int\limits_{t_0}^{t_0+T}{P(t) dt}  = \frac{X^2}{R}$ & \\
+				$P = \frac{1}{T} \int\limits_{t_0}^{t_0+T}{p(t) dt}$ & \\
 			\hline
 			\end{tabular}
 			
@@ -107,7 +107,7 @@
 				\begin{minipage}{12.5cm}
                 	\begin{itemize}
                 		\item Im Graph innerhald der Periode $T$ 	
-                			  eine ungerade Anzahl von $\boldsymbol{n}$ \textbf{Stützstellen} in konstanten \textbf{Abst\"anden} $\boldsymbol{\Delta t}=\frac{T}{n-1}$ w\"ahlen. Mit $t = t_0$ und $t = t_0+T$ \\ 
+                			  eine ungerade Anzahl von $\boldsymbol{n}$ \textbf{Stützstellen} in konstanten \textbf{Abst\"anden} $\boldsymbol{\Delta t}=\frac{T}{n-1}$ w\"ahlen. Mit Stützstellen bei $t = t_0$ und $t = t_0+T$ 
                 			  $\rightarrow$ Zur Kontrolle $x(t_0) = x(t_0+(n-1)\cdot\Delta t)$
                 		\item An diesen Stützstellen jeweils den 
                 			  Augenblickswert ablesen und in die Tabelle (siehe Links) eintragen.
@@ -320,7 +320,7 @@
     		\renewcommand{\arraystretch}{2.5}
     		\begin{tabular}{p{1.8cm} p{5.6cm}}
         		Unterwelle: 
-        			& $X_{U} = \overline{X} = \dfrac{\hat{X}}{\sqrt{2}} a_0 \qquad $  \\
+        			& $X_{U} = \overline{X} = \hat{X}\dfrac{a_0}{2}  \qquad $  \\
 	     		Grundwelle: 
 	     			& $X_{G} = \dfrac{\hat{X}}{\sqrt{2}} \sqrt{a_1^2 + b_1^2} \qquad  $   \\
 	     		Oberwellen: 
@@ -330,7 +330,7 @@
 	     		\multicolumn{2}{l}{Effektivwerte: $X_{RMS} = \sqrt{X_G^2 + X_O^2} \qquad X_{TRMS} =
 	     			\sqrt{X_U^2 + X_{RMS}^2}$ } \\
 				\multicolumn{2}{l}{ges. Blindleistung: 
-					$Q = 	\sqrt{Q_G^2 + Q_U^2 + U^2 \sum\limits_{k=2}^{\infty}I_k^2} = \sqrt{U^2 \sum\limits_{k=0}^{\infty}I_k^2}$} \\ 
+					$Q = 	\sqrt{Q_G^2 + Q_U^2 + U^2 \sum\limits_{k=2}^{\infty}I_k^2} = \sqrt{Q_1^2 + D^2}$} \\ 
 				\multicolumn{2}{l}{Grundschwinungs-Blindleistung: 
 					$Q_1 = \sqrt{{S_1}^2 - P^2}$} \\
 				\multicolumn{2}{l}{Wirkleistung: 
@@ -354,7 +354,7 @@
 	   (mit ohmscher Last R) 
 	\end{minipage}   
 	\begin{minipage}[c]{10cm} 	
-	   $ \qquad i(t) = \underbrace{\frac{\hat{I}}{\pi}}_{Unterwelle} + \underbrace{\frac{\hat{I}}{2}
+	   $ \qquad i_d(t) = \underbrace{\frac{\hat{I}}{\pi}}_{Unterwelle} + \underbrace{\frac{\hat{I}}{2}
 	   \sin(\omega t)}_{Grundwelle} - \underbrace{\frac{2\hat{I}}{\pi} \sum\limits_{k=1}^n \frac{1}{(2k-1)(2k+1)} \cos(2k\omega t)}_{Oberwellen} $
 	\end{minipage}   
 		
@@ -363,7 +363,7 @@
     		\hline 
       		\textbf{Bezeichnung}
       		%& \textbf{N\"aherungsformel}
-      		& \textbf{Formel} \\
+      		& \textbf{Formel} ($I_s = I_d$)\\
       		\hline
       		Scheitelwert 
       		%& %& $\hat{I} = 0.7071 \cdot A $
@@ -382,11 +382,11 @@
       		%& $I_{RMS} = \sqrt{I_G^2 + I_O^2}$ \\
       		Laststrom
       		%& $I_{TRMS} = 0.35355 \cdot A$
-      		& $I_{d} = I_{TRMS} =\frac{\hat{I}_d}{2} = \frac{U_d}{R}$ \\
+      		& $I_{d} = I_{TRMS} =\frac{\hat{I}_d}{2} = \frac{\hat{U}_d}{2R}$ \\
       		Prim\"arstrom
       		& $I_1 \approx \bar{I}_d \cdot \frac{1.21}{"u}$ \\
       		Leistungen
-      		& $Q = D | S_1 = P | Q_1 = 0$ \\
+      		& $Q = D ; S_1 = P ; Q_1 = 0$ \\
       		%Bauleistung 
       		%& $S_{TR} = \frac{S_{1Tr} + S_{2Tr}}{2}$ \\
       		\hline 
@@ -403,7 +403,7 @@
 	   (mit ohmscher Last R)
 	\end{minipage}   
 	\begin{minipage}[c]{10cm} 	
-	   $ \qquad i(t) = \underbrace{\frac{2 \hat{I}}{\pi}}_{Unterwelle} - \underbrace{\frac{4\hat{I}}{\pi} \sum\limits_{k=1}^n \frac{1}{(2k-1)(2k+1)} \cos(2k\omega t)}_{Oberwellen} $
+	   $ \qquad i_d(t) = \underbrace{\frac{2 \hat{I}}{\pi}}_{Unterwelle} - \underbrace{\frac{4\hat{I}}{\pi} \sum\limits_{k=1}^n \frac{1}{(2k-1)(2k+1)} \cos(2k\omega t)}_{Oberwellen} $
 	\end{minipage}\\
 \begin{minipage}[c]{10cm}  
 		\begin{tabular}{| l | l |}
