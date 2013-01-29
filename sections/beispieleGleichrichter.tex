@@ -4,8 +4,6 @@ Ungesteuerter Einweggleichrichter M1U: \newline
 Ventil/Diode und Trafo werden als verlustlos betrachtet.
 \adjustbox{scale=1}{\input{tikz/gleichrichter_einweg}}
 
-
-
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{ll}
 	Mittelwert $U_d$ 			& $ = \frac{\hat{U}_s}{\pi}$ \\
@@ -18,3 +16,20 @@ Ventil/Diode und Trafo werden als verlustlos betrachtet.
 	Bauleistung $S_{Tr}$		& $ = \frac{S_{1Tr} + S_{2Tr}}{2}$
 \end{tabular}
 \end{multicols}
+
+
+\subsection{Dimmer (Triac, W1C)}
+\begin{multicols}{2}
+Ventile verlustlos, Steuerwinkel = $90^\circ$ \newline
+\adjustbox{scale=1}{\input{tikz/gleichrichter_dimmer}}
+
+ \begin{tabular}{ll}
+ 	Effektivspannung $U_A$		& $ = U_N \cdot \sqrt{\frac{1}{2}}$ \\
+ 	Effektivstrom $I_S$			& $ = \frac{U_A}{R}$ \\
+ 	Wirkleistung $P_R$			& $ = \frac{U_A^2}{R} $ \\
+ 	Leistungsaufname $S_N$		& $ = U_N \cdot I_S $ (Winkel: $45^\circ$) \\
+ 	Leistungsfaktor $\lambda$	& $ = \cos \varphi = 0.707 $\\
+ 	Blindleistung $Q$			& $ = \sqrt{S_N^2 -P_R^2}$\\
+ \end{tabular}
+ \end{multicols}
+

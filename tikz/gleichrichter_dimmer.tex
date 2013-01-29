@@ -1,0 +1,9 @@
+\begin{circuitikz}[european]
+	\draw (0,0) node [circ, name=in] {};
+	\draw (0,-2) node[circ, name=out] {};
+	\draw (in) -- +(1,0) node[circ, name=p1] {};
+	\draw (p1) -- ++(0,0.5) to[D] ++(1.2,0) -- ++(0,-1) to[D] ++(-1.2,0) -- +(0,0.5) ;
+	\draw (2.2,0) node[circ] {} to[short, i=$I_S$] ++(1.4,0) to[R=R] ++(0,-2) -- (out);
+	\draw[->, thick] (0,-0.25) -- ++(0,-1.6) node[midway, left] {$U_N$};
+	\draw[->, thick] (3,-0.25) -- ++(0,-1.6) node[midway, left] {$U_A$};
+\end{circuitikz}
