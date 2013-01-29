@@ -1,28 +1,34 @@
-\subsection{Einweggleichrichter}
+\subsection{Gleichrichter}
 \begin{multicols}{2}
+\subsubsection{Einweggleichrichter}
 Ungesteuerter Einweggleichrichter M1U: \newline
 Ventil/Diode und Trafo werden als verlustlos betrachtet.
 \adjustbox{scale=1}{\input{tikz/gleichrichter_einweg}}
 
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{ll}
-	Mittelwert $U_d$ 			& $ = \frac{\hat{U}_s}{\pi}$ \\
-	Mittelwert $I_d$ 			& $ = \frac{U_d}{R}$ \\
-	Effektifvert $I_s$			& $ = \frac{\hat{U}_s}{2R}$ \\
-	Wirkleistung Last $P_L$		& $ = I_s^2 \cdot R$ \\
-	Leistungsaufnahme $S_{2Tr}$	& $ = U_s \cdot I_s$ \\
-	Leistungsaufnahme $S_{1Tr}$	& $ = U_1 \cdot 1.21 \cdot I_d \frac{1}{"u}$ \\
-	Primärstrom $I_1$			& $ \approx I_d \cdot \frac{1.21}{"u} $ \\
-	Bauleistung $S_{Tr}$		& $ = \frac{S_{1Tr} + S_{2Tr}}{2}$
+	Mittelwert $U_d$ 				& $ = \frac{\hat{U}_s}{\pi}$ \\
+	Mittelwert $I_d$ 				& $ = \frac{U_d}{R}$ \\
+\end{tabular}
+
+\begin{tabular}{ll}
+	Effektifvert $I_s$				& $ = \frac{\hat{U}_s}{2R}$ \\
+	Wirkleistung Last $P_L$			& $ = I_s^2 \cdot R$ \\
+	Leistungsaufnahme $S_{2Tr}$		& $ = U_s \cdot I_s$ \\
+	Leistungsaufnahme $S_{1Tr}$		& $ = U_1 \cdot 1.21 \cdot I_d \frac{1}{"u}$ \\
+	Primärstrom $I_1$				& $ \approx I_d \cdot \frac{1.21}{"u} $ \\
+	Bauleistung $S_{Tr}$			& $ = \frac{S_{1Tr} + S_{2Tr}}{2}$ \\
+	Stromgrundschwingung $I_{s1}$	& $ = \frac{P}{U_s \cdot \cos\varphi_1}$ ,($\varphi_1 = 0$) \\
+	Spitzenstrom in Ventil $\hat{i}$& $ = \hat{i}_d = \frac{\sqrt{2} U_s}{R}$ \\
 \end{tabular}
 \end{multicols}
 
-
-\subsection{Dimmer (Triac, W1C)}
 \begin{multicols}{2}
+\subsubsection{Dimmer (Triac, W1C)}
 Ventile verlustlos, Steuerwinkel = $90^\circ$ \newline
 \adjustbox{scale=1}{\input{tikz/gleichrichter_dimmer}}
 
+\renewcommand{\arraystretch}{1.5}
  \begin{tabular}{ll}
  	Effektivspannung $U_A$		& $ = U_N \cdot \sqrt{\frac{1}{2}}$ \\
  	Effektivstrom $I_S$			& $ = \frac{U_A}{R}$ \\
@@ -32,4 +38,19 @@ Ventile verlustlos, Steuerwinkel = $90^\circ$ \newline
  	Blindleistung $Q$			& $ = \sqrt{S_N^2 -P_R^2}$\\
  \end{tabular}
  \end{multicols}
-
+ 
+ \begin{multicols}{2} 
+ \subsubsection{Brückengleichrichter B2U}
+ Ventile/Dioden und Trafo verlustlos! \newline
+ \adjustbox{scale=1}{\input{tikz/gleichrichter_bruecken}}
+ 
+ \renewcommand{\arraystretch}{1.5}
+ \begin{tabular}{ll}
+ 	Mittelwert $U_d$						& $ = 2 \cdot \frac{\hat{U}_s}{\pi}$ \\
+ 	Mittelwert $I_d$						& $ = \frac{U_d}{R}$ \\
+ 	Effektivwert $I_{d,eff}$				& $ = \frac{U_{d,eff}}{R} = \frac{\sqrt{2} U_s}{\sqrt{2} R}$ \\
+ 	Effektivwert Ventilstrom $I_{V,eff}$	& $ = \frac{\hat{U}_s}{2 R} = \frac{U_s}{\sqrt{2} R}$ \\
+ 	Leistung $P_R$							& $ = R \cdot I_{d,eff}$ \\
+ 	Leistungsaufnahme $S_{TR}$				& $ = P_R $ Wenn alles ideal!
+ \end{tabular} 
+ \end{multicols}
