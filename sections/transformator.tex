@@ -19,7 +19,7 @@
 				Leistungsbilanz &
 					$\underline{S}_1 = \underline{S}_2$ 
 					oder $\underline{U}_2 \cdot \underline{I}_2^* = \underline{U}_1 \cdot \underline{I}_1^*$ \\
-				Scheinwiderstandsübersetztung &
+				Scheinwiderstandsübersetzung &
 					$\underline{Z}_{aU} = \frac{|\underline{U}_1|^2}{|\underline{U}_2|^2} \cdot \underline{Z}_a = \text{ü}^2 \cdot \underline{Z}_a$ &
 					\begin{minipage}{4.5cm}
 	            		\includegraphics[width=3.5cm]{bilder/IdealerTravoImpedanzwandler.png}
@@ -56,8 +56,9 @@
             		$I_2' = I_2 \cdot \frac{N_2}{N_1}$ \\
             	Nennstrom & 
             		$I_N = S_N / U_N$ \\
-            	Widerstand, Streufluss &
-            		$R_2' = R_2 \cdot (\frac{N_1}{N_2})^2$ \quad 
+            	Widerstand, &
+            		$R_2' = R_2 \cdot (\frac{N_1}{N_2})^2$\quad $ Z_2' = Z_2\cdot (\frac{N_1}{N_2})^2$\\
+            	Streufluss&
             		$X_{\sigma 2}' = X_{\sigma 2} \cdot (\frac{N_1}{N_2})^2$ \\
             	Vollst\"andiges Ersatzschaltbild &
             	\begin{minipage}{7cm}
@@ -73,6 +74,7 @@
                     \end{minipage} \\ \\
 				Systemgleichung des realen Trafo &
 					$\underline{U}_1 = R_1\cdot\underline{I}_1 + jX_{\sigma 1}\cdot\underline{I}_1 + jX_h\cdot(\underline{I}_1+\underline{I}_2')$ \\
+					&$\underline{U}_1 = R_1\cdot\underline{I}_1 + j\omega L_{\sigma 1}\cdot\underline{I}_1 + j\omega L_m\cdot(\underline{I}_1+\underline{I}_2')$ \\
 					& $\underline{U}_2' = R_2'\cdot\underline{I}_2' + jX_{\sigma 2}'\cdot\underline{I}_2' + jX_h\cdot(\underline{I}_1+\underline{I}_2')$
 
             \end{tabular}
@@ -124,8 +126,9 @@
 				Magnetisierungsstrom &
 					$I_\mu = I_{0} \cdot \sin(\varphi_0) = \sqrt{I_0^2 - I_{Fe}^2}$&
 					oder $\hat{I}_{\mu} = \frac{\hat{H}_{Fe} \cdot l_{Fe}}{N_1} \Leftrightarrow I_{\mu} = \frac{\hat{H}_{Fe} \cdot l_{Fe}}{\sqrt{2}\cdot N_1}$ \\
+				&$I_\mu = I_1-\frac{N_1}{N_2}\cdot I_2$\\
 
-				Leistungsfaktor i m Leerlauf &
+				Leistungsfaktor im Leerlauf &
 					$\cos(\varphi_0) = \frac{P_{0N}}{I_{0N} \cdot U_{1N}}$ & \multirow{2}{*}{\adjustbox{height=2cm}{\input{tikz/trafo_zeigerdiagrammRealLeerlauf} }}\\\\
 				Leerlaufstrom &
 					$I_0 = \sqrt{{I_{\mu}}^2 + {I_{Fe}}^2}$
@@ -280,8 +283,22 @@
                   \\ [d] = 0 \text{, falls Neutralleiter herausgeführt (optional)}
                   \end{cases}$$
 		\begin{center}
-	    	\includegraphics[height=6cm]{bilder/Drehstromtrafo.png}
+	    	\includegraphics[width=0.99\textwidth]{bilder/Drehstromtrafo.png}
 	    \end{center} 
+	    
+\subsection{Zeigerdiagramme}
+\begin{minipage}{0.33\textwidth}
+\textbf{Unbelasteter Trafo}\\
+\includegraphics[width=0.99\textwidth]{bilder/trafo_leerlauf.png}
+\end{minipage}
+\begin{minipage}{0.33\textwidth}
+\textbf{Belasteter Trafo}\\
+\includegraphics[width=0.99\textwidth]{bilder/trafo_nennlast.png}
+\end{minipage}
+\begin{minipage}{0.33\textwidth}
+\textbf{Kurzgeschlossener Trafo}\\
+\includegraphics[width=0.99\textwidth]{bilder/trafo_kurz.png}
+\end{minipage}
 	    
 %TODO: Im Parallelbetrieb
 

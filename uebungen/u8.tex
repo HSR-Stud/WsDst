@@ -1,0 +1,85 @@
+\subsection{Versorgungssysteme}
+Gegeben ist die Vereinfachte Versorgungsschaltung bestehend aus:
+
+\begin{itemize}
+\item Netz $Q$ mit folgenden Kenndaten
+\begin{itemize}
+	\item Kurzschlussleistung $S_Q = 100MVA$
+	\item Nennspannung $U_{NQ} = 10kV$
+\end{itemize}
+\item Der Transformator $T = Dyn5$ mit Kenndaten:
+\begin{itemize}
+	\item Übersetzung ü$ = \frac{10'000V}{400V}$
+	\item Die Kurzschlussspannung $U_K\% = (0.77+j\cdot 3.5)\%$
+	\item Betriebsleistung $S_B = 1MVA$
+\end{itemize}
+\item Die Leitung $L$
+\begin{itemize}
+	\item Länge $l = 100m$
+	\item Imedanzbelag $Z_L' = (0.03+j\cdot 0.1)\Omega /km$
+\end{itemize}
+\item Zur Berechnung des Netzes sind folgende Annahmen zu treffen
+\begin{itemize}
+	\item Das Netz ist für $10\%$ Überspannung ausgelegt
+	\item In Hoch und Mittelspannungsnetzen gilt: $\frac{R_Q}{X_Q}\approx 0.1$
+\end{itemize}
+\end{itemize}
+
+\begin{figure}[h!]
+    \begin{circuitikz}
+      \draw (12,2)
+      node[ocirc]{}
+      to[R=$R_L$](10,2)
+      to[L=$X_L$](8,2)
+      node[ocirc]{}
+      to[R=$R_{KT}$](6,2)
+      to[L=$X_{KT}$](4,2)
+      node[ocirc]{}
+      to[R=$R_{Q}$](2,2)
+      to[L=$X_{Q}$](0,2)
+      to[V=$U_q{=\frac{1.1\cdot U_{NQ}}{\sqrt{3}}}$](0,0)
+      to[short] (4,0)
+      node[ocirc]{}
+      to[short](8,0)
+      node[ocirc]{}
+      to[short] (12,0)
+      node[ocirc]{}
+      ;
+    \end{circuitikz}
+\end{figure}
+\textbf{Berechnung der Netzimpedanz}\\
+\begin{align*}
+Z_Q &= \frac{1.1\cdot U_q}{\sqrt{3}\cdot I_k} = \frac{1.1\cdot U_{NQ}^2}{S_Q} = \frac{1.1\cdot 10'000^2}{100MVA}= 1.1\Omega\\
+\frac{R_Q}{X_Q} &= 0.1 \Rightarrow Z_Q =\sqrt{R_Q^2+X_Q^2}  \Rightarrow X_Q = \frac{Z_Q}{1.005} = 1.0945\Omega\\
+R_Q&= X_Q\cdot 0.1 = 0.10945\\	
+Z_Q&= (0.10945 + j\cdot 1.0945)\Omega\\
+U_{KVZ} &= \frac{U_K\%\cdot U_{TN2}}{100\%} = \frac{(0.77+j\cdot 3.5)\cdot 400V}{100\%} = (3.08+14j)V\\
+S_N &= \sqrt{3} \cdot U_N\cdot I_N \Rightarrow \frac{S_N}{\sqrt{3}\cdot U_N} = \frac{1MVA}{\sqrt{3}\cdot 400V} = 1443.38A\\
+Z_{KT} &= \frac{U_{KV2}}{\sqrt{3}\cdot I_N} =\frac{(3.08+14j)V}{\sqrt{3}\cdot 1443.38A} = (1.232+j\cdot 5.6)m\Omega\\
+Z_L &= \frac{Z_L'}{l}\cdot L = (0.03+j\cdot 0.1) \cdot 0.1 = (3+j\cdot 10)m\Omega\\
+R_K &= \frac{R_Q}{\left(\frac{N_1}{N_2}\right)^2} + R_{KT}+R_L = \frac{0.109\Omega}{\left(\frac{10'000}{400}\right)^2} + 1.232m\Omega+3m\Omega = 4.407m\Omega\\
+X_K&= \frac{X_Q}{\left(\frac{N_1}{N_2}\right)^2} + x_{KT}+X_L = \frac{1094.5m\Omega	}{\left(\frac{10'000}{400}\right)^2} +5.6m\Omega+10m\Omega = 17.35m\Omega
+\end{align*}
+
+\newpage
+
+\textbf{Berechnung des stationären Kurzschlusses}
+\[
+	I_K = \frac{\frac{1.1\cdot U_{NQ}}{\sqrt{3}}}{R+j\cdot X_K} = \frac{1.1\cdot 400V}{\sqrt{3}\cdot (4.407m\Omega + j\cdot 17.35m\Omega} = (14.19011\angle -75.75^\circ) kA 
+\]
+\[
+	I_K(t) = \sqrt{2}\cdot 14.19kA\cdot \sin(2\pi 50Hz\cdot t-75.75^\circ)
+\]
+
+\textbf{Berechnung des transienten Kurzschlusses}\\
+Da der Kurzschluss zu Beginn nicht rein Sinusförmig ist muss die DGL gelöst werden. Die partikuläre ist die stationäre Lösung und als solche bekannt. Die homogene Lösung muss berechnet werden.
+\[\begin{array}{c}
+R_K\cdot I_K + L_K\cdot \frac{dI_K}{dt} = 0\\
+\frac{dI_K}{I_K} = -\frac{R_K}{L_K}\\
+\ln(I_K) = -\frac{R_K}{I_K}\cdot t\\
+I_K = B\cdot e^{-\frac{R_K}{I_K}\cdot t}\\
+I_K(t) = B\cdot e^{-\frac{R_K}{I_K}\cdot t}+ \sqrt{2}\cdot 14.19kA\cdot \sin(2\pi 50Hz\cdot t-75.75^\circ)\\
+\textrm{B aus Anfangsbedingungen}\quad I_K(0)=0\\
+-B = \sqrt{2}\cdot 14.19kA \sin(-75.75^\circ) 
+\end{array}\]
+

@@ -1,0 +1,67 @@
+\section{Übungen}
+\subsection{Übung 1: Mittelwerte}\label{ueb1}
+\begin{center}
+\includegraphics[width = 0.5\textwidth]{bilder/a1}
+\end{center}
+
+\begin{minipage}[t]{0.49\textwidth}
+\begin{align*}
+	i_n(t)&= \frac{i_{n+1}-i_n}{t_{n+1}-t_n}\cdot (t-t_n)+i_n&&t=0\textrm{ ergibt Offset}\\
+	i_1(t) &= 0&&=0\\
+	i_2(t)&= \frac{2}{0.0025}\cdot (t-0.0025) &&= 800\cdot t-2\\
+	i_3(t)&= 2&&=2\\
+	i_4(t)&= \frac{-3}{0.0025}\cdot (t-0.0075) +2&&=-1200\cdot t+11\\
+	i_5(t)&=-1&&=-1\\
+	i_6(t)&=\frac{1.5}{0.0025}\cdot (t-0.0125)-1&&=600\cdot t -8.5\\
+	i_7(t)&=0.5&&=0.5\\
+	i_8(t)&=\frac{-0.5}{0.0005}\cdot (t-0.0175)+0.5&&=-1000\cdot t+18
+\end{align*}
+\end{minipage}\begin{minipage}[t]{0.49\textwidth}
+\begin{align*}
+	u_n(t)&= \frac{u_{n+1}-u_n}{t_{n+1}-t_n}\cdot (t-t_n)+u_n\\
+	u_1(t)&= 0\\
+	u_2(t)&= \frac{2}{0.0025}\cdot(t-0.0025)+8&&=800\cdot t+6\\
+	u_3(t)&= 2&&=2\\
+	u_4(t)&=\frac{-3}{0.0025}\cdot (t-0.0075)-10&&=-1200\cdot t-1\\
+	u_5(t)&=-1&&=-1\\
+	u_6(t)&=\frac{-1.49}{0.0025}\cdot (t-0.0125) +5&&=596\cdot t-2,45\\
+	u_7(t)&=0.5&&=0.5\\
+	u_8(t)&=\frac{-0.5}{0.0005}\cdot(t-0.00175)-9.5&&=-1000\cdot t+8
+\end{align*}
+\end{minipage}
+
+\textbf{linearer Mittelwert} $I_{AV}\;,\;U_{AV}$
+\[
+I_{AV}= \frac{1}{T}\left(\int_{t_1}^{t_2} i_1(t) dt + \int_{t_2}^{t_3} i_2(t) dt +\ldots\right) \quad U_{AV} =\frac{1}{T} \left(\int_{t_1}^{t_2} u_1(t) dt + \int_{t_2}^{t_3} u_2(t) dt +\ldots\right)
+\]
+
+\textbf{Effektivwert} $I_{eff}\;,\;U_{eff}$
+\[
+I_{eff}= \sqrt{\frac{1}{T}\left(\int_{t_1}^{t_2} i_1(t)^2 dt + \int_{t_2}^{t_3} i_2(t)^2 dt +\ldots\right)} \quad U_{eff} =\sqrt{\frac{1}{T} \left(\int_{t_1}^{t_2} u_1(t)^2 dt + \int_{t_2}^{t_3} u_2(t)^2 dt +\ldots\right)}
+\]
+
+\textbf{Berechnung der Momentanleistung} $p(t)$\\
+Es ist, gleich wie bei dem Strom und der Spannung eine Fallunterscheidung für die einzelnen Zeitbereiche zu machen.
+\[
+ p(t) = u(t)\cdot i(t) \left\lbrace 
+ \begin{array}{rrr}
+ p_1(t)&=0&0\leq t\leq 0.0025\\
+ P_2(t)&=\dfrac{2}{0.0025}\cdot(t-0.0025)+8\cdot\dfrac{2}{0.0025}\cdot(t-0-0025)&0.0025\leq t\leq 0.005\\
+ p_3(t) &= 2\cdot 2&0.005\leq t \leq 0.0075\\
+ p_4(t)&=\dfrac{-3}{0.0025}\cdot (t-0.0075)-10 \cdot \dfrac{-3}{0.0025}\cdot (t-0.0075)+2&0.0075\leq t\leq 0.010\\
+ \vdots&\vdots&\vdots
+ \end{array}
+ \right.
+\]
+
+\textbf{Berechnung der Wirkleistung}
+\begin{align*}
+P&=\frac{1}{T}\int_0^T(u(t)\cdot i(t)) dt = \frac{1}{T}\int_0^T p(t)dt\\
+P&=\frac{1}{T}\left(\int_{0}^{0.0025}p_1(t)dt + \int_{0.0025}^{0.005}p_2(t)dt + \int_{0-005}^{0.0075}p_3(t)dt + \int_{0.0075}^{0.010}p_4(t)dt +\ldots\right)
+\end{align*}
+
+\textbf{Berechnung der effektiven Welligkeit des Stromes}
+\[
+	\textrm{Welligkeit } = \dfrac{\textrm{Effektivwert des Wechselanteils}}{\textrm{Gleichrichtwert}}	= \frac{\i_{\sim eff}}{i_{av}} \quad \textrm{wobei: } i_{\sim}(t) = i(t) - i_{av}
+\]
+

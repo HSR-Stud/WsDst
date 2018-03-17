@@ -158,8 +158,8 @@
  			\begin{minipage}{4.5cm}
  				\textbf{Bewegte Leiter im \\ homogenen Magnetfeld}\\
              	$U = B \cdot l \cdot v_q$ \\
-             	             	$v_q = v \cdot cos\beta = v \cdot sin\alpha\\$
-             	$U = \hat{U} \cdot sin \alpha$
+             	$v_q = v \cdot cos\beta = v \cdot sin\alpha$\\
+        		$U = \hat{U} \cdot sin \alpha$
              \end{minipage}
  			\begin{minipage}{3.5cm}
              	\includegraphics[width=3.5cm]{bilder/BewegteLeiter.png}
@@ -175,41 +175,41 @@
 %             	\textbf{Effektivwert für sinusf\"ormige Gr\"ossen} &
 %             		\fbox{$U = \frac{\hat{u}}{\sqrt{2}} \quad I = \frac{\hat{i}}{\sqrt{2}}$}
 %             \end{tabular}
-		\subsubsection{Komplexe Zeiger}
-			\begin{minipage}[t]{6cm}
-            	\textbf{Prinzip der Zeigertechnik}
-            \end{minipage}
-			\begin{minipage}{6cm}
-            	\includegraphics[width=6cm]{bilder/RotierenderScheitelwertzeiger.png}
-            \end{minipage}
-			\begin{minipage}{3.5cm}
-            	\includegraphics[width=3.5cm]{bilder/EulerscheRelation.png}
-            \end{minipage} \\
-			\begin{tabular}{p{4.0cm}p{5.5cm}p{8.5cm}}
-            	Komplexer Effektivwert &
-            		$\underline{U} = \frac{\underline{\hat{u}}}{\sqrt{2}}$ &
-            		$\underline{U}$ = Kompl. Effektivwert, $\underline{\hat{u}}$ = Kompl. Scheitelwert \\
-				Exponentialform &
-					$\underline{\hat{u}} = \hat{u} \cdot e^{j\varphi_u} \quad \underline{U} = U \cdot e^{j\varphi_U}$  &
-					$\varphi_U$ = Nullphasenwinkel der Spannung\\
-				Algebraische Form &
-					$\underline{\hat{u}} = \hat{u} (\cos(\varphi_u)+j\sin(\varphi_u))$ &
-					$\Real(\underline{\hat{u}}) = \hat{u} \cdot \cos(\varphi_u)$ \quad $\Imag(\underline{\hat{u}}) = \hat{u} \cdot \sin(\varphi_u)$ \\
-				&	$\underline{U} = U (\cos(\varphi_U)+j\sin(\varphi_U))$ &
-					$\Real(\underline{U}) = U \cdot \cos(\varphi_U)$ \quad $\Imag(\underline{U}) = U \cdot \sin(\varphi_U)$ \\
-				Umrechnung &
-					$|\hat{u}| = \sqrt{\Real(\underline{\hat{u}})^2 + \Imag(\underline{\hat{u}})^2}$ \break $\varphi_u = \arctan\left(\dfrac{\Imag(\underline{\hat{u}})}{\Real(\underline{\hat{u}})}\right)$ \\
-				&	$|U| = \sqrt{\Real(\underline{U})^2 + 		\Imag(\underline{U})^2}$ \break
-					 $\varphi_u = \arctan\left(\dfrac{\Imag(\underline{U})}{\Real(\underline{U})}\right)$ \\
-				Komplexe Drehzeiger & 	
-					\multicolumn{2}{l}{$\underline{u}(t) = \underline{\hat{u}} \cdot e^{j\omega t} = \hat{u} \cdot e^{j\varphi_u} \cdot e^{j\omega t} = \hat{u} \cdot e^{j(\omega t + \varphi_u})$} \\
-				Phasenwinkel & 
-					$\varphi = \varphi_u - \varphi_i$ &
-					$\varphi > 0$: $U$ eilt $I$ vor\\ 
-				& 	$\varphi = \frac{\Delta t}{T}\cdot 2\pi$ &
-					$\varphi < 0$: $U$ eilt $I$ nach\\
-			\end{tabular}
-		\subsubsection{Komponenten linearer Wechselstromnetzwerke}% \formelbuch{125}}
+\subsubsection{Komplexe Zeiger}
+	\begin{minipage}[t]{6cm}
+	  	\textbf{Prinzip der Zeigertechnik}
+    \end{minipage}
+	\begin{minipage}{6cm}
+       	\includegraphics[width=6cm]{bilder/RotierenderScheitelwertzeiger.png}
+    \end{minipage}
+	\begin{minipage}{3.5cm}
+       	\includegraphics[width=3.5cm]{bilder/EulerscheRelation.png}
+    \end{minipage} \\
+	\begin{tabular}{p{4.0cm}p{5.5cm}p{8.5cm}}
+       	Komplexer Effektivwert &
+       		$\underline{U} = \frac{\underline{\hat{u}}}{\sqrt{2}}$ &
+       		$\underline{U}$ = Kompl. Effektivwert, $\underline{\hat{u}}$ = Kompl. Scheitelwert \\
+			Exponentialform &
+			$\underline{\hat{u}} = \hat{u} \cdot e^{j\varphi_u} \quad \underline{U} = U \cdot e^{j\varphi_U}$  &
+			$\varphi_U$ = Nullphasenwinkel der Spannung\\
+			Algebraische Form &
+			$\underline{\hat{u}} = \hat{u} (\cos(\varphi_u)+j\sin(\varphi_u))$ &
+			$\Real(\underline{\hat{u}}) = \hat{u} \cdot \cos(\varphi_u)$ \quad $\Imag(\underline{\hat{u}}) = \hat{u} \cdot \sin(\varphi_u)$ \\
+			&	$\underline{U} = U (\cos(\varphi_U)+j\sin(\varphi_U))$ &
+			$\Real(\underline{U}) = U \cdot \cos(\varphi_U)$ \quad $\Imag(\underline{U}) = U \cdot \sin(\varphi_U)$ \\
+			Umrechnung &
+			$|\hat{u}| = \sqrt{\Real(\underline{\hat{u}})^2 + \Imag(\underline{\hat{u}})^2}$ \break $\varphi_u = \arctan\left(\dfrac{\Imag(\underline{\hat{u}})}{\Real(\underline{\hat{u}})}\right)$ \\
+			&	$|U| = \sqrt{\Real(\underline{U})^2 + 		\Imag(\underline{U})^2}$ \break
+			$\varphi_u = \arctan\left(\dfrac{\Imag(\underline{U})}{\Real(\underline{U})}\right)$ \\
+			Komplexe Drehzeiger & 	
+			\multicolumn{2}{l}{$\underline{u}(t) = \underline{\hat{u}} \cdot e^{j\omega t} = \hat{u} \cdot e^{j\varphi_u} \cdot e^{j\omega t} = \hat{u} \cdot e^{j(\omega t + \varphi_u})$} \\
+			Phasenwinkel & 
+			$\varphi = \varphi_u - \varphi_i$ &
+			$\varphi > 0$: $U$ eilt $I$ vor\\ 
+			& 	$\varphi = \frac{\Delta t}{T}\cdot 2\pi$ &
+			$\varphi < 0$: $U$ eilt $I$ nach\\
+		\end{tabular}
+	\subsubsection{Komponenten linearer Wechselstromnetzwerke}% \formelbuch{125}}
 			\begin{tabular}{llll}
 			$\underline{Z} = R +j X$: 
 				& Komplexer Widerstand (Impedanz); 
@@ -228,7 +228,7 @@
 					\parbox[c][0.8cm][c]{1cm}{\includegraphics[height=1cm,angle=90]{bilder/Wirkwiderstand.png}}&
                 	\parbox[c][0.8cm][c]{1cm}{\includegraphics[width=1cm]{bilder/WirkwiderstandZeiger.png}} \\
 			\hline	                    
-				\textbf{Induktivit\"at} &
+				\textbf{Induktivität} &
 					$ \underline{Z}_L = j \omega L = j X_L$&
 					$ X_L = \omega L$ &
 					$ \underline{Y}_L = \frac{1}{j \omega L} = j B_L$ & 
@@ -263,8 +263,8 @@
 		\subsubsection{Leistung im Wechselstromnetzwerk}% \formelbuch{162}}
 				\begin{tabular}{p{4cm}p{7cm}p{7cm}}
 					\multirow{2}{4cm}{Komplexe Leistung}  &
-						$ \underline{S} = P + jQ$  &\\
-						& $ \underline{S} = \underline{U} \cdot \underline{I}^\ast = U\cdot I \cdot e^{j(\varphi_u-\varphi_i)} = \frac{\underline{U}^2}{\underline{Z}^*} = \underline{I}^2 \cdot \underline{Z}$ &
+						$ \underline{S} = P + jQ$  & \textbf{TR:}\\
+						& $ \underline{S} = \underline{U} \cdot \underline{I}^\ast = U\cdot I \cdot e^{j(\varphi_u-\varphi_i)} = \frac{\underline{U}^2}{n\underline{Z}^*} = \underline{I}^2 \cdot \underline{Z}$ & $u(t)\cdot \texttt{conj } i(t)$ 
 						\\
 					Scheinleistung [VA]	& $ S = U\cdot I = \frac{U^2}{Z} 
 						= I^2 \cdot Z = \sqrt{P^2+Q^2}$& \\
@@ -279,36 +279,40 @@
 		\renewcommand{\arraystretch}{1}
 		\input{idiotenseite/elektrotechnik/subsections/ohmscheLeistung}
 		\subsubsection{Blindleistungskompensation (mit Kondensator)}
-		\input{sections/snipptes/blindleistungskompensation}
-		\begin{multicols}{2}
-			\subsubsection{Serieschaltung von $R_S$ \& $X_S$}
-				\begin{tabular}{lll}
-			%		& $Z = R_S + jX_S$ &\\
-			%		& $\varphi = \arctan(\frac{X_S}{R_S})$ & \\
-			%		& $U_R = U_0 \cdot \cos\varphi $& \\
-			%		& $U_X = U_0 \cdot \sin\varphi $ & \\
-			%		& $P = \frac{U_R^2}{R_S} = I^2\cdot R_S$ &\\
-			%		& $Q = \frac{U_X^2}{X_S} = I^2\cdot X_S$&
-				\end{tabular}
-				\begin{align*} 
-					Z 		&	= R_S + jX_S 				  \\
-					\varphi &	= \arctan(\frac{X_S}{R_S}) 	  \\
-					U_R 	&	= U_0 \cdot \cos\varphi 	  \\
-					U_X		&	= U_0 \cdot \sin\varphi 	  \\
-					P		&	= \frac{{U_R}^2}{R_S} = {I_0}^2\cdot R_S  \\
-					Q		&	= \frac{{U_X}^2}{X_S} = {I_0}^2\cdot X_S					
-				 \end{align*}
-			\columnbreak 
-			\subsubsection{Parallelschaltung von $R_P$ \& $X_P$}
-				\begin{align*}
-					Z 		&	= \frac{1}{\frac{1}{R_P}+j(-\frac{1}{X_P})}	\\
-					\varphi &	= \arctan(- \frac{R_P}{X_P})				\\
-					I_R 	&	= I_0 \cdot \cos\varphi						\\
-					I_X		&	= I_0 \cdot \sin\varphi						\\
-					P		&	= \frac{{U_0}^2}{R_P} = {I_R}^2\cdot R_P	    \\
-					Q		&	= \frac{{U_0}^2}{X_P} = {I_X}^2\cdot X_P
-				\end{align*}
-		\end{multicols}
+\input{sections/snipptes/blindleistungskompensation}
+
+	\begin{minipage}{0.49\textwidth}
+		\subsubsection{Serieschaltung von $R_S$ \& $X_S$}
+		\begin{tabular}{lll}
+		%		& $Z = R_S + jX_S$ &\\
+		%		& $\varphi = \arctan(\frac{X_S}{R_S})$ & \\
+		%		& $U_R = U_0 \cdot \cos\varphi $& \\
+		%		& $U_X = U_0 \cdot \sin\varphi $ & \\
+		%		& $P = \frac{U_R^2}{R_S} = I^2\cdot R_S$ &\\
+		%		& $Q = \frac{U_X^2}{X_S} = I^2\cdot X_S$&
+		\end{tabular}
+		\begin{align*} 
+			Z 		&	= R_S + jX_S 				  \\
+			\varphi &	= \arctan(\frac{X_S}{R_S}) 	  \\
+			U_R 	&	= U_0 \cdot \cos\varphi 	  \\
+			U_X		&	= U_0 \cdot \sin\varphi 	  \\
+			P		&	= \frac{{U_R}^2}{R_S} = {I_0}^2\cdot R_S  \\
+			Q		&	= \frac{{U_X}^2}{X_S} = {I_0}^2\cdot X_S					
+		\end{align*}
+	\end{minipage}
+	\begin{minipage}{0.49\textwidth}
+	\subsubsection{Parallelschaltung von $R_P$ \& $X_P$}
+	\begin{align*}
+		Z 		&	= \frac{1}{\frac{1}{R_P}+j(-\frac{1}{X_P})}	\\
+		\varphi &	= \arctan(- \frac{R_P}{X_P})				\\
+		I_R 	&	= I_0 \cdot \cos\varphi						\\
+		I_X		&	= I_0 \cdot \sin\varphi						\\
+		P		&	= \frac{{U_0}^2}{R_P} = {I_R}^2\cdot R_P	    \\
+		Q		&	= \frac{{U_0}^2}{X_P} = {I_X}^2\cdot X_P
+	\end{align*}
+	\end{minipage}
+	
+		
 
 		\subsubsection{Leistungsumsatz bei nichtsinusf\"ormigen periodischen Gr\"ossen}
 		\begin{minipage}[c]{7.5cm}

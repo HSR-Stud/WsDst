@@ -1,0 +1,36 @@
+\subsection{Sternpunktverschiebung}
+In einem Vierleiternetz $3x400V$ sind an $L1$ $60W$, an $L2$ $100W$, und an $L3$ $25W$ angeschlossen. Bestimmen sie die Verbraucherspannungen bei Neutralleiterunterbruch.\\
+\begin{align*}
+U_{1N} &= \frac{400V}{\sqrt{3}}\cdot e^{j\cdot 0^\circ} = 230.94V\cdot e^{j\cdot 0^\circ}\\
+U_{2N} &= \frac{400V}{\sqrt{3}}\cdot e^{-j\cdot 120^\circ} = 230.94V\cdot e^{-j\cdot 120^\circ}\\
+U_{3N} &= \frac{400V}{\sqrt{3}}\cdot e^{-j\cdot 240^\circ} = 230.94V\cdot e^{-j\cdot 240^\circ}\\
+Y_1&=\frac{P_1}{U_{1N}}=\frac{60}{U_{1N}} = 1.125mS\\
+Y_2&=\frac{P_2}{U_{2N}}=\frac{60}{U_{2N}} = 1.875mS\\
+Y_3&=\frac{P_3}{U_{3N}}=\frac{60}{U_{3N}} = 0.4688mS\\
+U_{nn'}&=-\frac{Y_1\cdot\underline{U_{1n}}+Y_2\cdot\underline{U_{2n}} Y_3\cdot\underline{U_{3n}}}{Y_1+Y_2+Y_3} = 81.141V\cdot e^{-j\cdot 92.2^\circ}\\
+\underline{U_{1N'}} &= \underline{U_{1N}}+ \underline{U_{nn'}} =  247.71V\cdot e^{j\cdot 19.11^\circ}\\
+\underline{U_{2N'}} &= \underline{U_{2N}}+ \underline{U_{nn'}} =  163.597V\cdot e^{-j\cdot 133.37 ^\circ}\\
+\underline{U_{3N'}} &= \underline{U_{3N}}+ \underline{U_{nn'}} =  302.70V\cdot e^{j\cdot 111.79^\circ}\\
+\end{align*}
+
+\subsection{Symmetrische Belastung und Kompensation}
+Ein Netzwerk mit 3x400V wird symmetrisch einem Verbraucher in Sternschaltung betrieben. Die Last ist ($R=20\Omega, L=48mH$).
+\begin{align*}
+I_1&= \frac{\underline{400V}}{\sqrt{3}\cdot \underline{Z}}= \frac{230.94V\angle0^\circ}{20+j\cdot100\cdot \pi \cdot 0.048H} = (9.22\angle-37.02^\circ )\\
+I_2&= \frac{\underline{400V}}{\sqrt{3}\cdot \underline{Z}}= \frac{230.94V\angle -120^\circ}{20+j\cdot100\cdot \pi \cdot 0.048H} = (9.22\angle-157.02^\circ )\\
+I_3&= \frac{\underline{400V}}{\sqrt{3}\cdot \underline{Z}}= \frac{230.94V\angle-240^\circ}{20+j\cdot100\cdot \pi \cdot 0.048H} = (9.22\angle 82.98^\circ )\\
+S&=*\cdot \underline{U}\cdot \underline{I}^* = 3\cdot \frac{400}{\sqrt{3}}\cdot (9.22\angle-37.02^\circ ) = (6387.76\angle 37.01^\circ) VA = (5100.45+j\cdot3845.65)VA\\
+P &= 5100.45W\\
+Q &= 3845.65VAr\\
+\cos(\varphi) = \cos(37.01^\circ) = 0.798
+\end{align*}
+
+Dieser Verbraucher soll nun auf einen $\cos(\varphi) = 0.92$ kompensiert werden. Berechnen sie das dazu nötige C.
+\[
+	C=\frac{(P_{str}\cdot \tan(\varphi_k)-P_{str}\cdot \tan(\varphi_k))}{\omega U^2} =\frac{(1700.15W\cdot \tan(\arccos(0.92))-1700.15W\cdot \tan(\arccos(0.798)))}{2\cdot\pi\cdot 50\cdot\left(\frac{400}{\sqrt{3}}\right)} = 33.4\mu F
+\]
+Der komplexe Verbraucher wird nun in Dreieckschaltung betrieben. Berechnen sie die Leistungen:
+\[
+	S_\Delta = 3\cdot S_Y = \frac{3\cdot \underline{U}\cdot \underline{U}^*}{\underline{Z}} = 15'301.35W+j\cdot 11'536.95VAr
+\]
+
