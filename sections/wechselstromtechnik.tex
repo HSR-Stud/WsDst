@@ -318,33 +318,45 @@
 		\begin{minipage}[c]{7.5cm}
 			\parbox{4cm}{Allgemein: Indizes beziehen sich auf Harmonische (Bsp: 0. Har = DC)\\}
 			\includegraphics[height=4cm]{bilder/ZeigerdiagrammNichtSinus.png}     
-    	\end{minipage}
+    	\end{minipage}%
 		\begin{minipage}[c]{10.5cm}   
     		\noindent
     		\renewcommand{\arraystretch}{2.0}
-    		\begin{tabular}{p{1.8cm} p{5.6cm}}
-        		Unterwelle: 
-        			& $X_{U} = \overline{X} = \hat{X}\dfrac{a_0}{2}  \qquad $  \\
-	     		Grundwelle: 
-	     			& $X_{G} = \dfrac{\hat{X}}{\sqrt{2}} \sqrt{a_1^2 + b_1^2} \qquad  $   \\
-	     		Oberwellen: 
-	     			& $X_{O} = \dfrac{\hat{X}}{\sqrt{2}}
-	     			\sqrt{\sum\limits_{k=2}^{\infty}a_k^2 +\sum\limits_{k=2}^{\infty}b_k^2}
-	     			\qquad $  \\ 
-	     		\multicolumn{2}{l}{Effektivwerte: $X_{RMS} = \sqrt{X_G^2 + X_O^2} \qquad X_{TRMS} =
-	     			\sqrt{X_U^2 + X_{RMS}^2}$ } \\
-				\multicolumn{2}{l}{ges. Blindleistung: 
-					$Q = 	\sqrt{Q_G^2 + Q_U^2 + U^2 \sum\limits_{k=2}^{\infty}I_k^2} = \sqrt{Q_1^2 + D^2}$} \\ 
-				\multicolumn{2}{l}{Grundschwinungs-Blindleistung: 
-					$Q_1 = \sqrt{{S_1}^2 - P^2}$} \\
-				\multicolumn{2}{l}{Wirkleistung: 
-					Durch Signale gleicher Frequenz umgesetzt, $P_R = {I_{TRMS}}^2 \cdot R$} \\
-				\multicolumn{2}{l}{Verzerrungsblindleistung: 
-					$D = U \cdot \sqrt{I_0^2 + \sum\limits_{k=2}^{\infty}I_k^2}$} \\
-				\multicolumn{2}{l}{Grundschwinungs-Scheinleistung: 
-					$S_1 = U \cdot I_G$} \\
-				\multicolumn{2}{l}{ges. Scheinleistung: 
-					$S = \sqrt{P^2 + {Q_1}^2 + D^2} = U \cdot I_{TRMS}$} \\
+    		\begin{tabular}{|p{3.6cm}p{7.3cm}|}
+	    		\hline
+	        		Unterwelle: 
+	        			& $X_{U} = \overline{X} = \hat{X}\dfrac{a_0}{2}  \qquad $  \\
+	        	\hline
+		     		Grundwelle: 
+		     			& $X_{G} = \dfrac{\hat{X}}{\sqrt{2}} \sqrt{a_1^2 + b_1^2} \qquad  $   \\
+		     	\hline
+		     		Oberwellen: 
+		     			& $X_{O} = \dfrac{\hat{X}}{\sqrt{2}}
+		     			\sqrt{\sum\limits_{k=2}^{\infty}a_k^2 +\sum\limits_{k=2}^{\infty}b_k^2}
+		     			\qquad $  \\ 
+		     	\hline
+		     		Effektivwerte:&
+		     		 $X_{RMS} = \sqrt{X_G^2 + X_O^2}$ \newline  $X_{TRMS} =
+		     			\sqrt{X_U^2 + X_{RMS}^2}$ \\
+	     		\hline
+					ges. Blindleistung: &
+						$Q = 	\sqrt{Q_G^2 + Q_U^2 + U^2  \sum\limits_{k=2}^{\infty}{I_k^2}} = \sqrt{Q_1^2 + D^2}$ \\
+				\hline 
+					Grundschwinungs-Blindleistung: &
+						$Q_1 = \sqrt{{S_1}^2 - P^2}$ \\
+				\hline
+					Wirkleistung: &
+						Durch Signale gleicher Frequenz umgesetzt, $P_R = {I_{TRMS}}^2 \cdot R$ \\
+				\hline
+					Verzerrungsblindleistung: &
+						$D = U \cdot \sqrt{I_{\mu}^2 + \sum\limits_{k=2}^{\infty}I_k^2}$ \\
+				\hline
+					Grundschwinungs-Scheinleistung: &
+						$S_1 = U \cdot I_G$ \\
+				\hline
+					ges. Scheinleistung: &
+						$S = \sqrt{P^2 + {Q_1}^2 + D^2} = U \cdot I_{TRMS}$ \\
+				\hline
 		 	\end{tabular} \\
 		 \renewcommand{\arraystretch}{1}
      	\end{minipage}    		\\ \\
@@ -377,10 +389,10 @@
       		& $= I_m = \bar{I}_d = \frac{\hat{I}}{\pi}$ \\
       		Grundwelle
       		& $I_G = 0.5$
-      		& $= \frac{\hat{I}}{2 \cdot \sqrt{2}}$ \\
+      		& $= \frac{\hat{I} \cdot \sqrt{2}}{\pi}$ \\
       		Oberwellen
       		& $I_O = 0.2162$
-      		& $= \frac{\hat{I}}{\sqrt{2}} \cdot 0.21762$ \\
+      		& $= \hat{I} \cdot \sqrt{2} \cdot 0.21762$ \\
       		Effektivwert (AC)
       		& $I_{_{RMS}} = 0.5433$
       		& $ = \sqrt{I_G^2 + I_O^2}$\\

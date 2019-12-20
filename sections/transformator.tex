@@ -174,8 +174,9 @@
 	            			            	\\		
 	            		$\underline{U}_R=R_k \cdot \underline{I}_1$ &
 	            		$\underline{U}_X=jX_k \cdot \underline{I}_1$ \\
-	            		$\underline{U}_2'=\underline{U}_2 \cdot "u = \underline{I}_2' \cdot \underline{Z}'  $\\
-	            		$\underline{Z}' = \underline{Z} \cdot {"u}^2$ \\
+	            		$\underline{U}_2'=\underline{U}_2 \cdot "u = \underline{I}_2' \cdot \underline{Z}'  $ & \textbf{Wicklungsverluste} \\ 
+	            		$\underline{Z}' = \underline{Z} \cdot {"u}^2$ & 
+	            		$P_{Wi} = R_1 I_1^2 + R_2 I_2^2$ \\ 
             \end{tabular}\\
 		\renewcommand{\arraystretch}{1.0}
 
@@ -287,18 +288,55 @@
 	    \end{center} 
 	    
 \subsection{Zeigerdiagramme}
-\begin{minipage}{0.33\textwidth}
-\textbf{Unbelasteter Trafo}\\
-\includegraphics[width=0.99\textwidth]{bilder/trafo_leerlauf.png}
-\end{minipage}
-\begin{minipage}{0.33\textwidth}
-\textbf{Belasteter Trafo}\\
-\includegraphics[width=0.99\textwidth]{bilder/trafo_nennlast.png}
-\end{minipage}
-\begin{minipage}{0.33\textwidth}
-\textbf{Kurzgeschlossener Trafo}\\
-\includegraphics[width=0.99\textwidth]{bilder/trafo_kurz.png}
-\end{minipage}
+\begin{tabular}{|l|l|l|}
+	\hline
+	\textbf{Leerlauf} & 
+	\textbf{Nennbetrieb} & 
+	\textbf{Kurzschluss} \\ \hline
+	
+	\rule{0pt}{10pt} \textit{Unbelasteter Trafo} & 
+	\rule{0pt}{10pt} \textit{Belasteter Trafo} & 
+	\rule{0pt}{10pt} \textit{Kurzgeschlossener Trafo} \\ 
+	
+	\begin{minipage}{0.25\textwidth}
+		\includegraphics[height=0.95\textwidth]{bilder/trafo_leerlauf.png}
+		%\rule{0pt}{130pt}
+	\end{minipage} & 
+	\begin{minipage}{0.25\textwidth}
+		\includegraphics[height=1.2\textwidth]{bilder/trafo_nennlast.png}
+		%\rule{0pt}{130pt}
+	\end{minipage} & 
+	\begin{minipage}{0.25\textwidth}
+		\includegraphics[height=1.2\textwidth]{bilder/trafo_kurz.png}
+		%\rule{0pt}{130pt}
+	\end{minipage} \\ \hline & & \\ 
+	
+	\begin{tabular}[c]{@{}l@{}}
+		$\underline{I}_2^{\prime} = 0$ \\ 
+		$\underline{I}_{10} = \underline{I}_{\mu} + \underline{I}_{Fe}$ \\ 
+		$\underline{U}_{1} = R_{1} \cdot \underline{I}_{1} + j \omega L_{1\sigma} \cdot \underline{I}_{1} + j \omega L_{m}\underline{I}_{\mu}$ \\ 
+		$0 = -j \omega L_{m}\underline{I}_{\mu} + \underline{U}_{2}^{\prime}$
+	\end{tabular} & 
+	\begin{tabular}[c]{@{}l@{}}
+		$\underline{I}_{1} = \underline{I}_{\mu} + \underline{I}_{Fe} + \underline{I}_{2}^{\prime}$ \\ 
+		$\underline{U}_{1} = R_{1} \cdot \underline{I}_{1} + j \omega L_{1\sigma} \cdot \underline{I}_{1} + j \omega L_{m}\underline{I}_{\mu}$ \\ 
+		$0 = R_{2}^{\prime} \cdot \underline{I}_{2}^{\prime} + j \omega L_{2\sigma}^{\prime} \cdot \underline{I}_{2}^{\prime} - j \omega L_{m}\underline{I}_{\mu} + \underline{U}_{2}^{\prime}$ \\ 
+		$\underline{U}_{m} = j \omega L_{m}\underline{I}_{\mu}$
+	\end{tabular} & 
+	\begin{tabular}[c]{@{}l@{}}
+		$\underline{I}_{1} = \underline{I}_{\mu} + \underline{I}_{Fe} + \underline{I}_{2}^{\prime}$ \\ 
+		$\underline{U}_{1} = R_{1} \cdot \underline{I}_{1} + j \omega L_{1\sigma} \cdot \underline{I}_{1} + j \omega L_{m}\underline{I}_{\mu}$ \\ 
+		$0 = R_{2}^{\prime} \cdot \underline{I}_{2}^{\prime} + j \omega L_{2\sigma}^{\prime} \cdot \underline{I}_{2}^{\prime} - j \omega L_{m}\underline{I}_{\mu}$ \\ 
+		$\underline{U}_2^{\prime} = 0$ \\ 
+		$\underline{U}_{m} = j \omega L_{m}\underline{I}_{\mu}$
+	\end{tabular} \\ & & \\ \hline
+		\includegraphics[height=0.07\textwidth]{bilder/Unbelastet_RostBau.png} 
+		\rule{0pt}{42pt} & 
+		\includegraphics[height=0.07\textwidth]{bilder/Belastet_RostBau.png} 
+		\rule{0pt}{42pt} & 
+		\includegraphics[height=0.07\textwidth]{bilder/Kurzschluss_RostBau.png}
+		\rule{0pt}{42pt} \\ \hline
+\end{tabular}
 	    
 %TODO: Im Parallelbetrieb
 
